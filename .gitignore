@@ -1,0 +1,25 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+package-lock.json
+
+# misc
+.env
+
+yarn.lock
+slnx.sqlite
+pre-commit
+
+# Test coverage details
+.nyc_output
+/coverage
+
+# Logs
+yarn-debug.log*
+yarn-error.log*
+/log
+
+# WebStorm ignores
+.idea
+/idea
