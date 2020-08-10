@@ -1,0 +1,24 @@
+input AttackConfigInput {
+  minimumIntervalInMinutes: Float,
+  playerVillagesToAllow: [PlayerVillageAttackInput],
+  playerVillageNamesToIgnore: [String],
+  barbarianVillagesArea: BarbarianVillagesAreaInput,
+  barbarianVillageNamesToIgnore: [String],
+  presetsNameStartsWith: String,
+  barbarianVillagesToIgnore: BarbarianVillagesToIgnoreInput
+}
+
+input PlayerVillageAttackInput {
+  name: String,
+  preferredPresetsOrder: [String]
+}
+
+input BarbarianVillagesAreaInput {
+  width: Int,
+  height: Int
+}
+
+input BarbarianVillagesToIgnoreInput {
+  toAttack: Boolean,
+  fromAttack: Boolean
+}

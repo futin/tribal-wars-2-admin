@@ -1,0 +1,13 @@
+type Query {
+  getAllAttackConfigs: [AttackConfigType]
+  getAttackConfig(id: ID!): AttackConfigType
+  getAllRecruitConfigs: [RecruitConfigType]
+  getRecruitConfig(id: ID!): RecruitConfigType
+}
+
+type Mutation {
+  setAttackConfig(attackConfig: AttackConfigInput!): AttackConfigType
+  deleteAttackConfig(id: ID!): AttackConfigType
+  setRecruitConfig(recruitConfig: RecruitConfigInput!): RecruitConfigType
+  deleteRecruitConfig(id: ID!): RecruitConfigType
+}

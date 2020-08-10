@@ -1,0 +1,25 @@
+type AttackConfigType {
+  id: ID,
+  minimumIntervalInMinutes: Float,
+  playerVillagesToAllow: [PlayerVillageAttackType],
+  playerVillageNamesToIgnore: [String],
+  barbarianVillagesArea: BarbarianVillagesAreaType,
+  barbarianVillageNamesToIgnore: [String],
+  presetsNameStartsWith: String,
+  barbarianVillagesToIgnore: BarbarianVillagesToIgnoreType
+}
+
+type PlayerVillageAttackType {
+  name: String,
+  preferredPresetsOrder: [String]
+}
+
+type BarbarianVillagesAreaType {
+  width: Int,
+  height: Int
+}
+
+type BarbarianVillagesToIgnoreType {
+  toAttack: Boolean,
+  fromAttack: Boolean
+}

@@ -1,0 +1,16 @@
+input RecruitConfigInput {
+  minimumIntervalInMinutes: Float,
+  recruitmentInstructions: [RecruitmentInstructionsInput]
+  playerVillagesToAllow: [PlayerVillageRecruitInput],
+  playerVillageNamesToIgnore: [String],
+}
+
+input RecruitmentInstructionsInput {
+  amount: Int,
+  unitType: UnitType
+}
+
+input PlayerVillageRecruitInput {
+  name: String,
+  recruitmentInstructions: [RecruitmentInstructionsInput]
+}

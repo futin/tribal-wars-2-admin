@@ -1,0 +1,17 @@
+type RecruitConfigType {
+  id: ID,
+  minimumIntervalInMinutes: Float,
+  recruitmentInstructions: [RecruitmentInstructionsType]
+  playerVillagesToAllow: [PlayerVillageRecruitType],
+  playerVillageNamesToIgnore: [String],
+}
+
+type RecruitmentInstructionsType {
+  amount: Int,
+  unitType: UnitType
+}
+
+type PlayerVillageRecruitType {
+  name: String,
+  recruitmentInstructions: [RecruitmentInstructionsType]
+}
