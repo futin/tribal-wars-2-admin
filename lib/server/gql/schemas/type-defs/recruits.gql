@@ -4,6 +4,8 @@ type RecruitConfigType {
   recruitmentInstructions: [RecruitmentInstructionsType]
   playerVillagesToAllow: [PlayerVillageRecruitType],
   playerVillageNamesToIgnore: [String],
+  executedTimes: Int
+  executedAt: DateTime
 }
 
 type RecruitmentInstructionsType {
