@@ -26,6 +26,7 @@
     "nodemon": "^2.0.4"
   },
   "scripts": {
+    "dev": "babel-node ./lib/server/index",
     "start": "nodemon --exec babel-node ./lib/server/index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
