@@ -1,8 +1,24 @@
 {
   "name": "tribal-wars-2-admin",
   "version": "1.0.0",
-  "description": "Script which automatizes certain processes in TW2",
-  "main": "lib/index.js",
+  "description": "Server which automatizes certain processes in TW2",
+  "main": "lib",
+  "scripts": {
+    "dev": "babel-node -r dotenv/config ./lib",
+    "start": "nodemon --exec babel-node -r dotenv/config ./lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/futin/tribal-wars-2-admin.git"
+  },
+  "author": "Andreja Jevtic <andjevtic@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/futin/tribal-wars-2-admin/issues"
+  },
+  "homepage": "https://github.com/futin/tribal-wars-2-admin#readme",
+
   "dependencies": {
     "apollo-server": "^2.16.1",
     "apollo-server-express": "^2.16.1",
@@ -26,13 +42,9 @@
     "@babel/preset-env": "^7.11.0",
     "nodemon": "^2.0.4"
   },
-  "scripts": {
-    "dev": "babel-node -r dotenv/config ./lib/server/index",
-    "start": "nodemon --exec babel-node -r dotenv/config ./lib/server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "engines": {
+    "node": "12.x"
   },
-  "author": "",
-  "license": "ISC",
   "nodemonConfig": {
     "ext": "js gql json"
   }
