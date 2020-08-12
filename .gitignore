@@ -23,3 +23,6 @@ yarn-error.log*
 # WebStorm ignores
 .idea
 /idea
+
+# production
+/dist
