@@ -8,10 +8,13 @@ type Query {
 
 type Mutation {
   setAttackConfig(attackConfig: AttackConfigInput!): AttackConfigType
-  deleteAttackConfig(id: ID!): Boolean
   activateImmediateAttack(attackConfig: AttackConfigInput!): Boolean
   setRecruitConfig(recruitConfig: RecruitConfigInput!): RecruitConfigType
-  deleteRecruitConfig(id: ID!): Boolean
   activateImmediateRecruit(recruitConfig: RecruitConfigInput!): Boolean
+  deleteAttackConfig(id: ID!): Boolean
+  deleteAllAttackConfigs: Boolean
+  deleteRecruitConfig(id: ID!): Boolean
+  deleteAllRecruitConfigs: Boolean
   deleteConfig(id: ID!): Boolean
+  deleteAllConfigs: Boolean
 }
