@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/futin/tribal-wars-2-admin#readme",
   "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.0",
     "apollo-server": "^2.16.1",
     "apollo-server-express": "^2.16.1",
     "babel-node": "0.0.1-security",
@@ -38,10 +42,6 @@
     "ws": "^7.3.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.1",
-    "@babel/node": "^7.10.5",
-    "@babel/preset-env": "^7.11.0",
     "nodemon": "^2.0.4"
   },
   "engines": {
