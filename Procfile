@@ -1,1 +1,1 @@
-web: dev
+web: babel-node ./lib
