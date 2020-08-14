@@ -1,5 +1,6 @@
 type AllConfigsType {
   attackConfigs: [AttackConfigType]
   recruitConfigs: [RecruitConfigType]
+  healthCheckConfig: Boolean
 }
 
