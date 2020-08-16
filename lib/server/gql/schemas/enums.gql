@@ -1,4 +1,15 @@
 enum UnitType {
-  sword
+  archer
+  axe
+  catapult
+  doppelsoldner
+  heavy_cavalry
+  knight
+  light_cavalry
+  mounted_archer
+  ram
+  snob
   spear
+  sword
+  trebuchet
 }
