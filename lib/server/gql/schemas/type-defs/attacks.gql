@@ -7,6 +7,7 @@ type AttackConfigType {
   barbarianVillageNamesToIgnore: [String],
   presetsNameStartsWith: String,
   barbarianVillagesToIgnore: BarbarianVillagesToIgnoreType
+  nonBarbarianVillagesPointsLimit: Int
   executedTimes: Int
   executedAt: DateTime
 }

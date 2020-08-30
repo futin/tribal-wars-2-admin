@@ -6,6 +6,7 @@ input AttackConfigInput {
   barbarianVillageNamesToIgnore: [String],
   presetsNameStartsWith: String,
   barbarianVillagesToIgnore: BarbarianVillagesToIgnoreInput
+  nonBarbarianVillagesPointsLimit: Int
 }
 
 input PlayerVillageAttackInput {
