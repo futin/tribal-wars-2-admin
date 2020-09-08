@@ -4,6 +4,7 @@ type Query {
   getAllRecruitConfigs: [RecruitConfigType]
   getRecruitConfig(id: ID!): RecruitConfigType
   getAllConfigs: AllConfigsType
+  getUnitsCount: Boolean
 }
 
 type Mutation {
