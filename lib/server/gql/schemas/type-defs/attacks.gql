@@ -1,5 +1,5 @@
 type AttackConfigType {
-  id: ID,
+  _id: ID,
   minimumIntervalInMinutes: Float,
   playerVillagesToAllow: [PlayerVillageAttackType],
   playerVillageNamesToIgnore: [String],

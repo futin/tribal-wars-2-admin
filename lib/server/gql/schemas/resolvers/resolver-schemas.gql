@@ -18,6 +18,4 @@ type Mutation {
   deleteAllRecruitConfigs: Boolean
   deleteConfig(id: ID!): Boolean
   deleteAllConfigs: Boolean
-  activateHealthCheck(intervalInMinutes: Float): Boolean
-  deactivateHealthCheck: Boolean
 }
