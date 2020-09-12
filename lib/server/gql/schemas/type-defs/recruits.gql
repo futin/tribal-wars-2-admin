@@ -1,5 +1,5 @@
 type RecruitConfigType {
-  _id: ID,
+  id: ID,
   minimumIntervalInMinutes: Float,
   recruitmentInstructions: [RecruitmentInstructionsType]
   playerVillagesToAllow: [PlayerVillageRecruitType],
