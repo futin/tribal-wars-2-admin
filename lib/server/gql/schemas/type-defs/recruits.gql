@@ -11,6 +11,7 @@ type RecruitConfigType {
 type RecruitmentInstructionsType {
   amount: Int,
   unitType: UnitType
+  isHOO: Boolean
 }
 
 type PlayerVillageRecruitType {

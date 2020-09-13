@@ -8,6 +8,7 @@ input RecruitConfigInput {
 input RecruitmentInstructionsInput {
   amount: Int,
   unitType: UnitType
+  isHOO: Boolean
 }
 
 input PlayerVillageRecruitInput {
