@@ -4,7 +4,7 @@ input AttackSchedulerInput {
   unitType: UnitType!
   arrivalDate: DateTime!
   timezone: String
-  presetConfigs: [PresetConfigInput]!
+  presetConfigs: [PresetConfigInput]
 }
 
 input PresetConfigInput {
