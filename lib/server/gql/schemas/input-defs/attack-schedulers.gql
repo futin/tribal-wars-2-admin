@@ -1,0 +1,7 @@
+input AttackSchedulerInput {
+  originVillageName: String!
+  targets: [String]!
+  unitType: UnitType!
+  arrivalDate: DateTime!
+  timezone: String
+}

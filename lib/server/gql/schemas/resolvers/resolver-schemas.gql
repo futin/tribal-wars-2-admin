@@ -12,6 +12,7 @@ type Mutation {
   activateImmediateAttack(attackConfig: AttackConfigInput!): Boolean
   setRecruitConfig(recruitConfig: RecruitConfigInput!): RecruitConfigType
   activateImmediateRecruit(recruitConfig: RecruitConfigInput!): Boolean
+  activateImmediateAttackScheduler(attackScheduler: AttackSchedulerInput!): Boolean
   deleteAttackConfig(id: ID!): Boolean
   deleteAllAttackConfigs: Boolean
   deleteRecruitConfig(id: ID!): Boolean
