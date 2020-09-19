@@ -4,7 +4,7 @@ type Query {
   getAllRecruitConfigs: [RecruitConfigType]
   getRecruitConfig(id: ID!): RecruitConfigType
   getAllConfigs: AllConfigsType
-  getUnitsCount: Boolean
+  getUnitsCount: Dynamic
   calculateAttackLaunchTimes(attackScheduler: AttackSchedulerInput!): AttackSchedulerType
 }
 
