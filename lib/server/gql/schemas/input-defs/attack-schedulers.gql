@@ -4,4 +4,11 @@ input AttackSchedulerInput {
   unitType: UnitType!
   arrivalDate: DateTime!
   timezone: String
+  presetConfigs: [PresetConfigInput]!
+}
+
+input PresetConfigInput {
+  name: String!
+  waitBetweenAttacksInMs: Int = 1000
+  numberOfAttacks: Int = 1
 }

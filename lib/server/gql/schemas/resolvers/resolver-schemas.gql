@@ -5,6 +5,7 @@ type Query {
   getRecruitConfig(id: ID!): RecruitConfigType
   getAllConfigs: AllConfigsType
   getUnitsCount: Boolean
+  calculateAttackLaunchTimes(attackScheduler: AttackSchedulerInput!): AttackSchedulerType
 }
 
 type Mutation {
@@ -12,7 +13,7 @@ type Mutation {
   activateImmediateAttack(attackConfig: AttackConfigInput!): Boolean
   setRecruitConfig(recruitConfig: RecruitConfigInput!): RecruitConfigType
   activateImmediateRecruit(recruitConfig: RecruitConfigInput!): Boolean
-  activateImmediateAttackScheduler(attackScheduler: AttackSchedulerInput!): Boolean
+  setAttackScheduler(attackScheduler: AttackSchedulerInput!): AttackSchedulerType
   deleteAttackConfig(id: ID!): Boolean
   deleteAllAttackConfigs: Boolean
   deleteRecruitConfig(id: ID!): Boolean

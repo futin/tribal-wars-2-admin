@@ -1,0 +1,25 @@
+type AttackSchedulerType {
+  id: ID,
+  name: String
+  x: Int
+  y: Int
+  timezone: String
+  unitType: UnitType
+  arrivalDate: DateTime
+  targets: [TargetType]
+  presetConfigs: [PresetConfigType]
+}
+
+type TargetType {
+  name: String,
+  x: Int
+  y: Int
+  launchTime: DateTime
+  travelTime: String
+}
+
+type PresetConfigType {
+  name: String
+  waitBetweenAttacksInMs: Int
+  numberOfAttacks: Int
+}
