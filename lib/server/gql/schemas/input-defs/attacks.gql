@@ -7,7 +7,7 @@ input AttackConfigInput {
   presetsNameStartsWith: String,
   barbarianVillagesToIgnore: BarbarianVillagesToIgnoreInput
   nonBarbarianVillagesPointsLimit: Int
-  ignoreBarbarian: Boolean
+  barbarianVillagesPointsLimit: Int
 }
 
 input PlayerVillageAttackInput {
