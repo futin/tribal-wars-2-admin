@@ -8,6 +8,7 @@ type AttackSchedulerType {
   unitType: UnitType
   arrivalDate: DateTime
   targets: [TargetType]
+  target: TargetType
   presetConfig: PresetConfigType
 }
 

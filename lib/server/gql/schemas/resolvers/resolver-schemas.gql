@@ -6,6 +6,7 @@ type Query {
   getAllConfigs: AllConfigsType
   getUnitsCount(googleDocId: ID): Dynamic
   calculateAttackLaunchTimes(attackScheduler: AttackSchedulerInput!): AttackSchedulerType
+  getScheduledAttacks(filter: AttackSchedulerFilter!): [AttackSchedulerType]
 }
 
 type Mutation {

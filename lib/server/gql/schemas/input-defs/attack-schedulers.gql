@@ -12,3 +12,9 @@ input PresetConfigInput {
   waitBetweenAttacksInMs: Int = 1000
   numberOfAttacks: Int = 1
 }
+
+input AttackSchedulerFilter {
+  id: ID
+  chainId: ID
+  name: String
+}
