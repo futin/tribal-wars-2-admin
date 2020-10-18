@@ -20,4 +20,5 @@ type Mutation {
   deleteAllRecruitConfigs: Boolean
   deleteConfig(id: ID!): Boolean
   deleteAllConfigs: Boolean
+  deleteChainedAttackSchedulers(chainId: ID!): Boolean
 }

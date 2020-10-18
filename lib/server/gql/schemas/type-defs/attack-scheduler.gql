@@ -1,5 +1,6 @@
 type AttackSchedulerType {
   id: ID,
+  chainId: ID
   name: String
   x: Int
   y: Int
@@ -7,7 +8,7 @@ type AttackSchedulerType {
   unitType: UnitType
   arrivalDate: DateTime
   targets: [TargetType]
-  presetConfigs: [PresetConfigType]
+  presetConfig: [PresetConfigType]
 }
 
 type TargetType {
