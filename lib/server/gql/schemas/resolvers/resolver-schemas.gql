@@ -4,7 +4,7 @@ type Query {
   getAllRecruitConfigs: [RecruitConfigType]
   getRecruitConfig(id: ID!): RecruitConfigType
   getAllConfigs: AllConfigsType
-  getUnitsCount(googleDocId: ID): Dynamic
+  getVillageData(googleDocId: ID): Dynamic
   calculateAttackLaunchTimes(attackScheduler: AttackSchedulerInput!): AttackSchedulerType
   getScheduledAttacks(filter: AttackSchedulerFilter!): [AttackSchedulerType]
 }
