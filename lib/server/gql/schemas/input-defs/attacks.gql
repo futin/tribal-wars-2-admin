@@ -8,6 +8,7 @@ input AttackConfigInput {
   barbarianVillagesToIgnore: BarbarianVillagesToIgnoreInput
   nonBarbarianVillagesPointsLimit: Int
   barbarianVillagesPointsLimit: Int
+  shufflePlayerVillages: Boolean
 }
 
 input PlayerVillageAttackInput {
