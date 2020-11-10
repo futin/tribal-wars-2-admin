@@ -13,3 +13,8 @@ enum UnitType {
   sword
   trebuchet
 }
+
+enum MoveType {
+  support
+  relocate
+}

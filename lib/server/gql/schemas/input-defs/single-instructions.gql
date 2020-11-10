@@ -1,0 +1,13 @@
+input MoveUnitsConfigInput {
+  targetVillageName: String,
+  targetVillageCoordinates: String
+  units: [MoveUnitsInput]
+  type: MoveType
+  playerVillageNamesToIgnore: [String]
+  playerVillageNamesToAllow: [String]
+}
+
+input MoveUnitsInput {
+  amount: Int
+  unitType: UnitType
+}
