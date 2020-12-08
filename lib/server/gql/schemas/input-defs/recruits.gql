@@ -3,6 +3,7 @@ input RecruitConfigInput {
   recruitmentInstructions: [RecruitmentInstructionsInput]
   playerVillagesToAllow: [PlayerVillageRecruitInput],
   playerVillageNamesToIgnore: [String],
+  groupNames: [String]
 }
 
 input RecruitmentInstructionsInput {
