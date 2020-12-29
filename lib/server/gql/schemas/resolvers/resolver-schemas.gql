@@ -24,4 +24,5 @@ type Mutation {
   deleteAllConfigs: Boolean
   deleteChainedAttackSchedulers(chainId: ID!): Boolean
   activateMassMoveUnits(moveConfig: MoveUnitsConfigInput!): Boolean
+  activateMassDonation(massDonationConfig: MassDonationConfigInput!): Boolean
 }

@@ -11,3 +11,9 @@ input MoveUnitsInput {
   amount: Int
   unitType: UnitType
 }
+
+input MassDonationConfigInput {
+  percentage: Int!
+  playerVillageNamesToAllow: [String]
+  playerVillageNamesToIgnore: [String]
+}
