@@ -48,7 +48,7 @@
     "nodemon": "^2.0.4"
   },
   "engines": {
-    "node": "12.x"
+    "node": "14.x"
   },
   "nodemonConfig": {
     "ext": "js gql json"
