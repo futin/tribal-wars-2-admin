@@ -1,0 +1,8 @@
+type BuildingConfigType {
+  id: ID,
+  villageName: String
+  buildingOrder: [BuildingType]
+  buildingPriority: BuildingPriorityType
+  executedTimes: Int
+  executedAt: DateTime
+}

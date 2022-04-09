@@ -18,3 +18,15 @@ enum MoveType {
   support
   relocate
 }
+
+enum BuildingType {
+  FARM
+  RESOURCES
+  TOWN_HALL
+  WALL
+}
+
+enum BuildingPriorityType {
+  CHEAP
+  FAST
+}
