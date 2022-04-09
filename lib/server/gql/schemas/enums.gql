@@ -20,13 +20,16 @@ enum MoveType {
 }
 
 enum BuildingType {
-  FARM
   RESOURCES
-  TOWN_HALL
+  SECONDARY
+  HEADQUARTER
+  BARRACKS
+  FARM
   WALL
 }
 
 enum BuildingPriorityType {
   CHEAP
   FAST
+  LOWEST_LEVEL
 }
