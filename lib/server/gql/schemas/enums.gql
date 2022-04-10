@@ -31,5 +31,5 @@ enum BuildingOrderType {
 enum BuildingPriorityType {
   CHEAP
   FAST
-  LOWEST_LEVEL
+  LOW_LEVEL
 }
