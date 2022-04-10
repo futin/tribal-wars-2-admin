@@ -16,7 +16,7 @@ type Mutation {
   activateImmediateRecruit(recruitConfig: RecruitConfigInput!): Boolean
   activateImmediateSpyRecruit(maxRecruitSpies: Int!, villagesToIgnore: [String]): Boolean
   setAttackScheduler(attackScheduler: AttackSchedulerInput!): AttackSchedulerType
-  setBuildingUpgradeConfig(buildingUpgradeConfig: BuildingUpgradeConfigInput!): BuildingConfigType
+  setBuildingUpgradeConfig(buildingUpgradeConfig: BuildingUpgradeConfigInput!): BuildingUpgradeConfigType
   activateImmediateBuildingUpgrade(buildingUpgradeConfig: BuildingUpgradeConfigInput!): Boolean
   deleteAttackConfig(id: ID!): Boolean
   deleteAllAttackConfigs: Boolean
