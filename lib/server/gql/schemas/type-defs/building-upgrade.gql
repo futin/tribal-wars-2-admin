@@ -1,0 +1,9 @@
+type BuildingUpgradeConfigType {
+  id: ID,
+  villageName: String
+  buildingOrder: [BuildingOrderType]
+  buildingPriority: BuildingPriorityType
+  executedTimes: Int
+  executedAt: DateTime
+  nextExecutionAt: DateTime
+}
