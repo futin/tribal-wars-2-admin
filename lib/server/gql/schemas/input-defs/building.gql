@@ -1,5 +1,0 @@
-input BuildingConfigInput {
-  villageName: String
-  buildingOrder: [BuildingType]
-  buildingPriority: BuildingPriorityType
-}

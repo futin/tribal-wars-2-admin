@@ -19,7 +19,7 @@ enum MoveType {
   relocate
 }
 
-enum BuildingType {
+enum BuildingOrderType {
   RESOURCES
   SECONDARY
   HEADQUARTER
