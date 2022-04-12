@@ -1,6 +1,5 @@
 type RecruitConfigType {
   id: ID,
-  minimumIntervalInMinutes: Float,
   recruitmentInstructions: [RecruitmentInstructionsType]
   playerVillagesToAllow: [PlayerVillageRecruitType],
   playerVillageNamesToIgnore: [String],
