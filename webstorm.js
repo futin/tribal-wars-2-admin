@@ -1,9 +1,9 @@
 /* eslint-disable */
 System.config({
   paths: {
-    "@global-constants": "./lib/constants",
-    "#global-utils": "./lib/utils",
-    "@tw-executors": "./lib/tw",
-    "@custom-emitter": "./lib/custom-emitter"
+    "#global-utils": "./lib/utils.js",
+    "#global-constants": "./lib/constants.js",
+    "#tw-executors": "./lib/tw/index.js",
+    "#custom-emitter": "./lib/custom-emitter.js"
   }
 })
