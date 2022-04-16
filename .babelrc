@@ -6,10 +6,10 @@
     ["module-resolver", {
       "root": ["."],
       "alias": {
-        "@global-constants": "./lib/constants",
-        "@global-utils": "./lib/utils",
-        "@tw-executors": "./lib/tw",
-        "@custom-emitter": "./lib/custom-emitter"
+        "#global-constants": "./lib/constants",
+        "#global-utils": "./lib/utils",
+        "#tw-executors": "./lib/tw",
+        "#custom-emitter": "./lib/custom-emitter"
       }
     }]
   ]
