@@ -1,5 +1,5 @@
 type AllConfigsType {
-  attackConfigs: [AttackConfigType]
+  farmingConfigs: [FarmingConfigType]
   recruitConfigs: [RecruitConfigType]
 }
 
