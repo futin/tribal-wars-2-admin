@@ -5,7 +5,8 @@
   "exports": "./lib/index.js",
   "type": "module",
   "scripts": {
-    "start": "node ./lib/index.js",
+    "dev": "node ./lib/index.js",
+    "start": "nodemon ./lib/index.js",
     "production": "node ./lib/index.js"
   },
   "imports": {
