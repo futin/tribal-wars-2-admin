@@ -4,6 +4,7 @@ type BuildingUpgradeConfigType {
   buildingOrder: [BuildingOrderType]
   buildingPriority: BuildingPriorityType
   executedTimes: Int
+  failedTimes: Int
   executedAt: DateTime
   nextExecutionAt: DateTime
 }
