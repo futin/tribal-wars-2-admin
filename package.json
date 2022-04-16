@@ -2,13 +2,18 @@
   "name": "tribal-wars-2-admin",
   "version": "1.2.0",
   "description": "Server which automatizes certain processes in TW2",
-  "main": "lib",
+  "exports": "./lib/server/mongodb/index.js",
+  "type": "module",
   "scripts": {
     "local": "npm run build && heroku local web",
     "dev": "babel-node -r dotenv/config ./lib",
-    "start": "nodemon --exec babel-node -r dotenv/config ./lib",
+    "start": "node ./lib/server/mongodb/index.js",
     "build": "rm -rf dist && babel lib -d dist --copy-files",
     "production": "npm run build && node dist"
+  },
+  "imports": {
+    "#global-utils": "./lib/utils.js",
+    "#global-constants": "./lib/constants.js"
   },
   "repository": {
     "type": "git",
@@ -49,7 +54,7 @@
     "nodemon": "^2.0.4"
   },
   "engines": {
-    "node": "14.x"
+    "node": ">=16.0.0"
   },
   "nodemonConfig": {
     "ext": "js gql json"
