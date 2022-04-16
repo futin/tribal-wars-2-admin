@@ -5,8 +5,6 @@
   "exports": "./lib/index.js",
   "type": "module",
   "scripts": {
-    "local": "heroku local web",
-    "dev": "babel-node -r dotenv/config ./lib",
     "start": "node ./lib/index.js",
     "production": "node ./lib/index.js"
   },
