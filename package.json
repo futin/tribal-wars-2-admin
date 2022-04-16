@@ -26,15 +26,9 @@
   },
   "homepage": "https://github.com/futin/tribal-wars-2-admin#readme",
   "dependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.1",
-    "@babel/node": "^7.10.5",
-    "@babel/preset-env": "^7.11.0",
     "apollo-server": "^2.16.1",
     "apollo-server-express": "^2.16.1",
     "axios": "^0.19.2",
-    "babel-node": "0.0.1-security",
-    "babel-plugin-module-resolver": "^4.1.0",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -46,7 +40,6 @@
     "mongoose": "^5.10.5",
     "oniyi-object-transform": "git+https://futin@github.com/futin/oniyi-object-transform.git",
     "promises-to-retry": "^1.3.0",
-    "regenerator-runtime": "^0.13.7",
     "standard": "^14.3.4",
     "ws": "^7.3.1"
   },
