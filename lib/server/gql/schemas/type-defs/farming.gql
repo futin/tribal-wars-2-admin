@@ -1,4 +1,4 @@
-type AttackConfigType {
+type FarmingConfigType {
   id: ID,
   minimumIntervalInMinutes: Float,
   playerVillagesToAllow: [PlayerVillageAttackType],
