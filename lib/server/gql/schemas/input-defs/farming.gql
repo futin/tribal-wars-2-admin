@@ -1,4 +1,4 @@
-input AttackConfigInput {
+input FarmingConfigInput {
   minimumIntervalInMinutes: Float,
   playerVillagesToAllow: [PlayerVillageAttackInput],
   playerVillageNamesToIgnore: [String],

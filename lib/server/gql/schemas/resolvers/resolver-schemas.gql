@@ -1,6 +1,6 @@
 type Query {
-  getAllAttackConfigs: [AttackConfigType]
-  getAttackConfig(id: ID!): AttackConfigType
+  getAllFarmingConfigs: [FarmingConfigType]
+  getFarmingConfig(id: ID!): FarmingConfigType
   getAllRecruitConfigs: [RecruitConfigType]
   getRecruitConfig(id: ID!): RecruitConfigType
   getAllConfigs: AllConfigsType
@@ -10,16 +10,16 @@ type Query {
 }
 
 type Mutation {
-  setAttackConfig(attackConfig: AttackConfigInput!): AttackConfigType
-  activateImmediateAttack(attackConfig: AttackConfigInput!): Boolean
+  setFarmingConfig(farmingConfig: FarmingConfigInput!): FarmingConfigType
+  activateImmediateFarming(farmingConfig: FarmingConfigInput!): Boolean
   setRecruitConfig(recruitConfig: RecruitConfigInput!): RecruitConfigType
   activateImmediateRecruit(recruitConfig: RecruitConfigInput!): Boolean
   activateImmediateSpyRecruit(maxRecruitSpies: Int!, villagesToIgnore: [String]): Boolean
   setAttackScheduler(attackScheduler: AttackSchedulerInput!): AttackSchedulerType
   setBuildingUpgradeConfig(buildingUpgradeConfig: BuildingUpgradeConfigInput!): BuildingUpgradeConfigType
   activateImmediateBuildingUpgrade(buildingUpgradeConfig: BuildingUpgradeConfigInput!): Boolean
-  deleteAttackConfig(id: ID!): Boolean
-  deleteAllAttackConfigs: Boolean
+  deleteFarmingConfig(id: ID!): Boolean
+  deleteAllFarmingConfigs: Boolean
   deleteRecruitConfig(id: ID!): Boolean
   deleteAllRecruitConfigs: Boolean
   deleteConfig(id: ID!): Boolean
