@@ -5,20 +5,26 @@ input FarmingConfigInput {
   playerVillagesToAllow: [PlayerVillageFarmingInput],
   "List of village names NOT to be included in the attack."
   playerVillageNamesToIgnore: [String],
-  """
-  Area that is considered for the farming attack, with your village in the center of the area.
-  """
+  "Area that is considered for the farming attack, with your village in the center of the area."
   barbarianVillagesArea: BarbarianVillagesAreaInput,
+  "List of barbarian villages to ignore"
   barbarianVillageNamesToIgnore: [String],
+  "In order to execute multiple presets with the similar name, use this option"
   presetsNameStartsWith: String,
+  "Set of instructions to ignore barbarian villages being attacked, in order not to send multiple attacks to the same villages"
   barbarianVillagesToIgnore: BarbarianVillagesToIgnoreInput
-  nonBarbarianVillagesPointsLimit: Int
-  barbarianVillagesPointsLimit: Int
+  "The player villages will be attacked/farmed also. Maximum number of points is 400"
+  maxNonBarbarianVillagesPoints: Int
+  "Barbarian villages less then this value will not be attacked"
+  minBarbarianVillagePoints: Int
+  "Shuffles the villages randomly before starting the farming"
   shufflePlayerVillages: Boolean
 }
 
 input PlayerVillageFarmingInput {
+  "The exact name of your village"
   name: String,
+  "The list of preset names, where order will be preserved"
   preferredPresetsOrder: [String]
 }
 
@@ -28,6 +34,8 @@ input BarbarianVillagesAreaInput {
 }
 
 input BarbarianVillagesToIgnoreInput {
+  "If true, barbarian villages that are being attacked (and the attack hasn't landed yet) are ignored"
   toAttack: Boolean,
+  "If true, barbarian villages that are being attacked (and the attack has already landed) are ignored"
   fromAttack: Boolean
 }

@@ -1,30 +1,55 @@
 type Query {
+  "Returns all farming configurations"
   getAllFarmingConfigs: [FarmingConfigType]
+  "Returns a single farming configuration"
   getFarmingConfig(id: ID!): FarmingConfigType
+  "Returns all recruitment configurations"
   getAllRecruitConfigs: [RecruitConfigType]
+  "Returns a single recruitment configuration"
   getRecruitConfig(id: ID!): RecruitConfigType
+  "Returns all configurations"
   getAllConfigs: AllConfigsType
-  getVillageData(googleDocId: ID): Dynamic
+  "Returns detailed villages data, both resources and units. If googleDocId is provided and valid, the whole statistics is being stored in google document"
+  getVillagesData(googleDocId: ID): Dynamic
+  "Returns the details regarding the attack, with the exact execution times for every provided target"
   calculateAttackLaunchTimes(attackScheduler: AttackSchedulerInput!): AttackSchedulerType
+  "Returns all scheduled attacks"
   getScheduledAttacks(filter: AttackSchedulerFilter!): [AttackSchedulerType]
 }
 
 type Mutation {
+  "Creates a farming configuration that is used by the scheduler"
   setFarmingConfig(farmingConfig: FarmingConfigInput!): FarmingConfigType
+  "Executes a single farming action immediately, without persisting the configuration"
   activateImmediateFarming(farmingConfig: FarmingConfigInput!): Boolean
+  "Creates a recruit configuration that is used by the scheduler"
   setRecruitConfig(recruitConfig: RecruitConfigInput!): RecruitConfigType
+  "Executes a single recruit action immediately, without persisting the configuration"
   activateImmediateRecruit(recruitConfig: RecruitConfigInput!): Boolean
+  "Executes recruit action of spies, up to the [maxRecruitSpies] number"
   activateImmediateSpyRecruit(maxRecruitSpies: Int!, villagesToIgnore: [String]): Boolean
+  "Creates an attack configuration that is used by the scheduler"
   setAttackScheduler(attackScheduler: AttackSchedulerInput!): AttackSchedulerType
+  "Creates a building upgrades configuration that is used by the scheduler"
   setBuildingUpgradeConfig(buildingUpgradeConfig: BuildingUpgradeConfigInput!): BuildingUpgradeConfigType
+  "Executes a single building upgrades action immediately, without persisting the configuration"
   activateImmediateBuildingUpgrade(buildingUpgradeConfig: BuildingUpgradeConfigInput!): Boolean
-  deleteFarmingConfig(id: ID!): Boolean
-  deleteAllFarmingConfigs: Boolean
-  deleteRecruitConfig(id: ID!): Boolean
-  deleteAllRecruitConfigs: Boolean
-  deleteConfig(id: ID!): Boolean
-  deleteAllConfigs: Boolean
-  deleteChainedAttackSchedulers(chainId: ID!): Boolean
+  "Executes a single movement action, without persisting the configuration"
   activateMassMoveUnits(moveConfig: MoveUnitsConfigInput!): Boolean
+  "Executes a single mass donation action, without persisting the configuration"
   activateMassDonation(massDonationConfig: MassDonationConfigInput!): Boolean
+  "Deletes a single farming configuration"
+  deleteFarmingConfig(id: ID!): Boolean
+  "Deletes all farming configurations"
+  deleteAllFarmingConfigs: Boolean
+  "Deletes a single recruit configuration"
+  deleteRecruitConfig(id: ID!): Boolean
+  "Deletes all recruit configurations"
+  deleteAllRecruitConfigs: Boolean
+  "Deletes any single configuration"
+  deleteConfig(id: ID!): Boolean
+  "Deletes all configurations"
+  deleteAllConfigs: Boolean
+  "Deletes all chained attack configurations"
+  deleteChainedAttackSchedulers(chainId: ID!): Boolean
 }
