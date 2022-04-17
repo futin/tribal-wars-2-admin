@@ -1,3 +1,6 @@
+### 1.4.0 on 17.04.2022
+- GraphQL schema updated, documentation added
+
 ### 1.3.1 on 16.04.2022
 - Init update of schema
 
