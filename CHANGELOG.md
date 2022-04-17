@@ -1,3 +1,6 @@
+### 1.4.1 on 17.04.2022
+- Automatic mechanism for recruit and building upgrades improved
+
 ### 1.4.0 on 17.04.2022
 - GraphQL schema updated, documentation added
 
