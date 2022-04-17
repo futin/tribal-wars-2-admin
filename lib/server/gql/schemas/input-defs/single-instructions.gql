@@ -1,19 +1,30 @@
 input MoveUnitsConfigInput {
+  "Village name where the units should be moved"
   targetVillageName: String,
+  "Village coordinates where the units should be moved"
   targetVillageCoordinates: String
+  "Instructions for units that are being moved"
   units: [MoveUnitsInput]
+  "Moving action can be either relocate or support"
   type: MoveType
+  "List of player village names to ignore movement"
   playerVillageNamesToIgnore: [String]
+  "List of player village names to allow movement"
   playerVillageNamesToAllow: [String]
 }
 
 input MoveUnitsInput {
+  "The amount of units to be moved"
   amount: Int
+  "The type of unit that requires moving"
   unitType: UnitType
 }
 
 input MassDonationConfigInput {
+  "Percentage that should be donated"
   percentage: Int!
+  "List of player village names to allow donation"
   playerVillageNamesToAllow: [String]
+  "List of player village names to ignore donation"
   playerVillageNamesToIgnore: [String]
 }

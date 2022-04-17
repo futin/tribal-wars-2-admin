@@ -1,15 +1,24 @@
 input AttackSchedulerInput {
+  "Player village from which the attack is being executed"
   originVillageName: String!
+  "Multiple targets can be provided, by using exact coordinates. E.x.: ['500|500']"
   targets: [String]!
+  "Used for calculation of the arrival time. Use the slowest unit in the attack in order to get correct timing"
   unitType: UnitType!
+  "The desired time of the attack arrival"
   arrivalDate: DateTime!
+  "In which timezone the response should be returned"
   timezone: String
+  "Configuration for the preset used in the attack"
   presetConfig: PresetConfigInput
 }
 
 input PresetConfigInput {
+  "Name of the preset used in the attack"
   name: String!
+  "Delay between the attacks in milliseconds"
   waitBetweenAttacksInMs: Int = 1000
+  "Number of same attack executions. Good for fake attacks"
   numberOfAttacks: Int = 1
 }
 

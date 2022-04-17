@@ -7,7 +7,7 @@ type FarmingConfigType {
   barbarianVillageNamesToIgnore: [String],
   presetsNameStartsWith: String,
   barbarianVillagesToIgnore: BarbarianVillagesToIgnoreType
-  nonBarbarianVillagesPointsLimit: Int
+  maxNonBarbarianVillagesPoints: Int
   executedTimes: Int
   executedAt: DateTime
 }

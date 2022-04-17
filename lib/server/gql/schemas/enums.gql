@@ -20,16 +20,25 @@ enum MoveType {
 }
 
 enum BuildingOrderType {
+  "These building upgrades are included: timber_camp, clay_pit, iron_mine and warehouse"
   RESOURCES
+  "These building upgrades are included: timber_camp, clay_pit, iron_mine and warehouse"
   SECONDARY
+  "Only focuses on upgrading headquarter"
   HEADQUARTER
+  "Only focuses on upgrading barracks"
   BARRACKS
+  "Only focuses on upgrading farm"
   FARM
+  "Only focuses on upgrading wall"
   WALL
 }
 
 enum BuildingPriorityType {
+  "Focus on the building upgrades with the least required resources"
   CHEAP
+  "Focus on the building upgrades with the least required building time"
   FAST
+  "Focus on building upgrades with the least required level"
   LOW_LEVEL
 }
