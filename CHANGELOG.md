@@ -1,3 +1,6 @@
+### 1.5.0 on 18.04.2022
+- Added setup documentation
+
 ### 1.4.1 on 17.04.2022
 - Automatic mechanism for recruit and building upgrades improved
 
