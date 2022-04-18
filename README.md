@@ -67,7 +67,7 @@ TW_AUTH_TOKEN='your-token'
 7. Copy/past the token from the step above into your .env under the name `TW_AUTH_TOKEN`
 8. You are all set!
 
-Now you should be able to run the server. Here you can find simple http requests that will let you know if your `TW configs` are set up correctly.
+Now you should be able to run the server.
 
 ### MongoDB setup
 
