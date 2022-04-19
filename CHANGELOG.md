@@ -1,3 +1,7 @@
+### 1.6.0 on 19.04.2022
+- Updated (almost) all dependencies
+- Added background color for google sheets
+
 ### 1.5.0 on 18.04.2022
 - Added setup documentation
 
