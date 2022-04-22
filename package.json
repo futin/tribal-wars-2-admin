@@ -5,9 +5,9 @@
   "exports": "./lib/index.js",
   "type": "module",
   "scripts": {
-    "dev": "node ./lib/index.js",
-    "start": "nodemon ./lib/index.js",
-    "production": "node ./lib/index.js"
+    "dev": "node lib/index.js",
+    "start": "nodemon lib/index.js",
+    "production": "node lib/index.js"
   },
   "imports": {
     "#global-utils": "./lib/utils.js",
@@ -29,7 +29,6 @@
     "apollo-server": "^3.6.7",
     "apollo-server-express": "^3.6.7",
     "axios": "^0.26.1",
-    "body-parser": "^1.20.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "glob": "^8.0.1",
@@ -40,11 +39,11 @@
     "mongoose": "^5.10.5",
     "oniyi-object-transform": "git+https://futin@github.com/futin/oniyi-object-transform.git",
     "promises-to-retry": "^1.4.0",
-    "standard": "^16.0.4",
     "ws": "^8.5.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "standard": "^16.0.4"
   },
   "engines": {
     "node": "16.14.2"
