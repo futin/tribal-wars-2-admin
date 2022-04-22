@@ -2,16 +2,16 @@ input RecruitConfigInput {
   "List of recruitment instructions"
   recruitmentInstructions: [RecruitmentInstructionsInput]
   "List of player villages to recruit"
-  playerVillagesToAllow: [PlayerVillageRecruitInput],
+  playerVillagesToAllow: [PlayerVillageRecruitInput]
   "List of player villages NOT to recruit"
-  playerVillageNamesToIgnore: [String],
+  playerVillageNamesToIgnore: [String]
   "This allowed recruitment by group. Every village that has 1 or more groups in the provided list are affected"
   groupNames: [String]
 }
 
 input RecruitmentInstructionsInput {
   "The amount of units to be recruited"
-  amount: Int,
+  amount: Int
   "The type of unit that requires recruiting"
   unitType: UnitType
   "Use this option in order to recruit troops from Hall of Orders"
@@ -20,7 +20,7 @@ input RecruitmentInstructionsInput {
 
 input PlayerVillageRecruitInput {
   "Player village name"
-  name: String,
+  name: String
   "List of recruitment instructions"
   recruitmentInstructions: [RecruitmentInstructionsInput]
 }

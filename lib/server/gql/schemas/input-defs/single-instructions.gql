@@ -1,6 +1,6 @@
 input MoveUnitsConfigInput {
   "Village name where the units should be moved"
-  targetVillageName: String,
+  targetVillageName: String
   "Village coordinates where the units should be moved"
   targetVillageCoordinates: String
   "Instructions for units that are being moved"

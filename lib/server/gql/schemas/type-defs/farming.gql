@@ -1,28 +1,30 @@
 type FarmingConfigType {
   id: ID,
-  minimumIntervalInMinutes: Float,
-  playerVillagesToAllow: [PlayerVillageAttackType],
-  playerVillageNamesToIgnore: [String],
-  barbarianVillagesArea: BarbarianVillagesAreaType,
-  barbarianVillageNamesToIgnore: [String],
-  presetsNameStartsWith: String,
+  minimumIntervalInMinutes: Float
+  playerVillagesToAllow: [PlayerVillageAttackType]
+  playerVillageNamesToIgnore: [String]
+  barbarianVillagesArea: BarbarianVillagesAreaType
+  barbarianVillageNamesToIgnore: [String]
+  presetsNameStartsWith: String
   barbarianVillagesToIgnore: BarbarianVillagesToIgnoreType
   maxNonBarbarianVillagesPoints: Int
+  maxOutgoingAttacksAllowed: Int
   executedTimes: Int
   executedAt: DateTime
 }
 
 type PlayerVillageAttackType {
-  name: String,
+  name: String
   preferredPresetsOrder: [String]
+  maxOutgoingAttacksAllowed: Int
 }
 
 type BarbarianVillagesAreaType {
-  width: Int,
+  width: Int
   height: Int
 }
 
 type BarbarianVillagesToIgnoreType {
-  toAttack: Boolean,
+  toAttack: Boolean
   fromAttack: Boolean
 }
