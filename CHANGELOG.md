@@ -1,3 +1,6 @@
+### 1.6.1 on 22.04.2022
+- Patched farming API: added new param for maximum attacks per farming village
+
 ### 1.6.0 on 19.04.2022
 - Updated (almost) all dependencies
 - Added background color for google sheets
