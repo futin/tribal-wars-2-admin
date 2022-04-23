@@ -15,6 +15,10 @@ type Query {
   calculateAttackLaunchTimes(attackScheduler: AttackSchedulerInput!): AttackSchedulerType
   "Returns all scheduled attacks"
   getScheduledAttacks(filter: AttackSchedulerFilter!): [AttackSchedulerType]
+  "Returns all building upgrade configurations"
+  getAllBuildingUpgradeConfigs: [BuildingUpgradeConfigType]
+  "Returns a single building upgrade configuration"
+  getBuildingUpgradeConfig(id: ID!): BuildingUpgradeConfigType
 }
 
 type Mutation {
@@ -52,4 +56,8 @@ type Mutation {
   deleteAllConfigs: Boolean
   "Deletes all chained attack configurations"
   deleteChainedAttackSchedulers(chainId: ID!): Boolean
+  "Deletes a single building upgrade configuration"
+  deleteBuildingUpgradeConfig(id: ID!): Boolean
+  "Deletes all building upgrade configurations"
+  deleteAllBuildingUpgradeConfigs: Boolean
 }
