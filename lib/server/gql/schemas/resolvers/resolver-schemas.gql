@@ -15,6 +15,10 @@ type Query {
   calculateAttackLaunchTimes(attackScheduler: AttackSchedulerInput!): AttackSchedulerType
   "Returns all scheduled attacks"
   getScheduledAttacks(filter: AttackSchedulerFilter!): [AttackSchedulerType]
+  "Returns all building upgrade configurations"
+  getAllBuildingUpgradeConfigs: [BuildingUpgradeConfigType]
+  "Returns a single building upgrade configuration"
+  getBuildingUpgradeConfig(id: ID!): BuildingUpgradeConfigType
 }
 
 type Mutation {
@@ -27,7 +31,7 @@ type Mutation {
   "Executes a single recruit action immediately, without persisting the configuration"
   activateImmediateRecruit(recruitConfig: RecruitConfigInput!): Boolean
   "Executes recruit action of spies, up to the [maxRecruitSpies] number"
-  activateImmediateSpyRecruit(maxRecruitSpies: Int!, villagesToIgnore: [String]): Boolean
+  activateImmediateSpyRecruit(spyRecruitConfig: SpyRecruitConfigInput!): Boolean
   "Creates an attack configuration that is used by the scheduler"
   setAttackScheduler(attackScheduler: AttackSchedulerInput!): AttackSchedulerType
   "Creates a building upgrades configuration that is used by the scheduler"
@@ -46,10 +50,14 @@ type Mutation {
   deleteRecruitConfig(id: ID!): Boolean
   "Deletes all recruit configurations"
   deleteAllRecruitConfigs: Boolean
-  "Deletes any single configuration"
-  deleteConfig(id: ID!): Boolean
   "Deletes all configurations"
   deleteAllConfigs: Boolean
-  "Deletes all chained attack configurations"
+  "Deletes all attack schedulers that are suppose to be executed by the same village"
   deleteChainedAttackSchedulers(chainId: ID!): Boolean
+  "Deletes all attack schedulers"
+  deleteAllAttackSchedulers: Boolean
+  "Deletes a single building upgrade configuration"
+  deleteBuildingUpgradeConfig(id: ID!): Boolean
+  "Deletes all building upgrade configurations"
+  deleteAllBuildingUpgradeConfigs: Boolean
 }
