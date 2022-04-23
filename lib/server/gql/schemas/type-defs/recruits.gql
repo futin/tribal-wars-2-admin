@@ -1,19 +1,19 @@
 type RecruitConfigType {
-  id: ID,
+  id: ID
   recruitmentInstructions: [RecruitmentInstructionsType]
-  playerVillagesToAllow: [PlayerVillageRecruitType],
-  playerVillageNamesToIgnore: [String],
+  playerVillagesToAllow: [PlayerVillageRecruitType]
+  playerVillageNamesToIgnore: [String]
   executedTimes: Int
   executedAt: DateTime
 }
 
 type RecruitmentInstructionsType {
-  amount: Int,
+  amount: Int
   unitType: UnitType
   isHOO: Boolean
 }
 
 type PlayerVillageRecruitType {
-  name: String,
+  name: String
   recruitmentInstructions: [RecruitmentInstructionsType]
 }

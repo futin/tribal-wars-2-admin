@@ -1,20 +1,22 @@
 input FarmingConfigInput {
   "Minimum minutes until next farming attack."
-  minimumIntervalInMinutes: Float,
+  minimumIntervalInMinutes: Float
   "List of your villages that will be used for this farming configuration."
-  playerVillagesToAllow: [PlayerVillageFarmingInput],
+  playerVillagesToAllow: [PlayerVillageFarmingInput]
   "List of village names NOT to be included in the attack."
-  playerVillageNamesToIgnore: [String],
+  playerVillageNamesToIgnore: [String]
   "Area that is considered for the farming attack, with your village in the center of the area."
-  barbarianVillagesArea: BarbarianVillagesAreaInput,
+  barbarianVillagesArea: BarbarianVillagesAreaInput
   "List of barbarian villages to ignore"
-  barbarianVillageNamesToIgnore: [String],
+  barbarianVillageNamesToIgnore: [String]
   "In order to execute multiple presets with the similar name, use this option"
-  presetsNameStartsWith: String,
+  presetsNameStartsWith: String
   "Set of instructions to ignore barbarian villages being attacked, in order not to send multiple attacks to the same villages"
   barbarianVillagesToIgnore: BarbarianVillagesToIgnoreInput
   "The player villages will be attacked/farmed also. Maximum number of points is 400"
   maxNonBarbarianVillagesPoints: Int
+  "Maximum number of attacks that can be sent for all villages, by default it is 50"
+  maxOutgoingAttacksAllowed: Int
   "Barbarian villages less then this value will not be attacked"
   minBarbarianVillagePoints: Int
   "Shuffles the villages randomly before starting the farming"
@@ -23,19 +25,21 @@ input FarmingConfigInput {
 
 input PlayerVillageFarmingInput {
   "The exact name of your village"
-  name: String,
+  name: String
   "The list of preset names, where order will be preserved"
   preferredPresetsOrder: [String]
+  "Maximum number of attacks that can be sent for this village, by default it is 50"
+  maxOutgoingAttacksAllowed: Int
 }
 
 input BarbarianVillagesAreaInput {
-  width: Int,
+  width: Int
   height: Int
 }
 
 input BarbarianVillagesToIgnoreInput {
   "If true, barbarian villages that are being attacked (and the attack hasn't landed yet) are ignored"
-  toAttack: Boolean,
+  toAttack: Boolean
   "If true, barbarian villages that are being attacked (and the attack has already landed) are ignored"
   fromAttack: Boolean
 }

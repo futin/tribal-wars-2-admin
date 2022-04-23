@@ -1,5 +1,5 @@
 type AttackSchedulerType {
-  id: ID,
+  id: ID
   chainId: ID
   name: String
   x: Int
@@ -13,7 +13,7 @@ type AttackSchedulerType {
 }
 
 type TargetType {
-  name: String,
+  name: String
   x: Int
   y: Int
   launchTime: DateTime
