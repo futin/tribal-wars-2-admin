@@ -1,5 +1,7 @@
 type AllConfigsType {
   farmingConfigs: [FarmingConfigType]
   recruitConfigs: [RecruitConfigType]
+  attackSchedulers: [AttackSchedulerType]
+  buildingUpgradeConfigs: [BuildingUpgradeConfigType]
 }
 
