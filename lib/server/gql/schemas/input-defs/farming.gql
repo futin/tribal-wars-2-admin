@@ -16,11 +16,11 @@ input FarmingConfigInput {
   "The player villages will be attacked/farmed also. Maximum number of points is 400"
   maxNonBarbarianVillagesPoints: Int
   "Maximum number of attacks that can be sent for all villages, by default it is 50"
-  maxOutgoingAttacksAllowed: Int
+  maxOutgoingAttacksAllowed: Int = 50
   "Barbarian villages less then this value will not be attacked"
-  minBarbarianVillagePoints: Int
+  minBarbarianVillagePoints: Int = 100
   "Shuffles the villages randomly before starting the farming"
-  shufflePlayerVillages: Boolean
+  shufflePlayerVillages: Boolean = true
 }
 
 input PlayerVillageFarmingInput {
@@ -29,17 +29,17 @@ input PlayerVillageFarmingInput {
   "The list of preset names, where order will be preserved"
   preferredPresetsOrder: [String]
   "Maximum number of attacks that can be sent for this village, by default it is 50"
-  maxOutgoingAttacksAllowed: Int
+  maxOutgoingAttacksAllowed: Int = 50
 }
 
 input BarbarianVillagesAreaInput {
-  width: Int
-  height: Int
+  width: Int = 10
+  height: Int = 10
 }
 
 input BarbarianVillagesToIgnoreInput {
   "If true, barbarian villages that are being attacked (and the attack hasn't landed yet) are ignored"
-  toAttack: Boolean
+  toAttack: Boolean = true
   "If true, barbarian villages that are being attacked (and the attack has already landed) are ignored"
-  fromAttack: Boolean
+  fromAttack: Boolean = false
 }

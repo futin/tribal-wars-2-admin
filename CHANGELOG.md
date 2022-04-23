@@ -1,3 +1,6 @@
+### 1.7.1 on 23.04.2022
+- Added some default schema values
+
 ### 1.7.0 on 23.04.2022
 - Documentation updated, endpoints refactored, missing endpoints added
 
