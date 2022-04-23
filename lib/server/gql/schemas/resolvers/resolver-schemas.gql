@@ -31,7 +31,7 @@ type Mutation {
   "Executes a single recruit action immediately, without persisting the configuration"
   activateImmediateRecruit(recruitConfig: RecruitConfigInput!): Boolean
   "Executes recruit action of spies, up to the [maxRecruitSpies] number"
-  activateImmediateSpyRecruit(maxRecruitSpies: Int!, villagesToIgnore: [String]): Boolean
+  activateImmediateSpyRecruit(spyRecruitConfig: SpyRecruitConfigInput!): Boolean
   "Creates an attack configuration that is used by the scheduler"
   setAttackScheduler(attackScheduler: AttackSchedulerInput!): AttackSchedulerType
   "Creates a building upgrades configuration that is used by the scheduler"

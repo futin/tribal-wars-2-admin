@@ -1,4 +1,6 @@
 input RecruitConfigInput {
+  "Minimum minutes until next recruit operation"
+  minimumRetrialIntervalInMinutes: Int
   "List of recruitment instructions"
   recruitmentInstructions: [RecruitmentInstructionsInput]
   "List of player villages to recruit"
