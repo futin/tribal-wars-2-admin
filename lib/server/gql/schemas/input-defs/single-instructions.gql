@@ -21,13 +21,13 @@ input MoveUnitsInput {
 }
 
 input SpyRecruitConfigInput {
-  maxRecruitSpies: Int!
+  maxRecruitSpies: Int! = 2
   villagesToIgnore: [String]
 }
 
 input MassDonationConfigInput {
   "Percentage that should be donated"
-  percentage: Int!
+  percentage: Int! = 15
   "List of player village names to allow donation"
   playerVillageNamesToAllow: [String]
   "List of player village names to ignore donation"
