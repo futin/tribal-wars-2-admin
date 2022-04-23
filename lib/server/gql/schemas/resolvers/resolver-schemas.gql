@@ -50,12 +50,12 @@ type Mutation {
   deleteRecruitConfig(id: ID!): Boolean
   "Deletes all recruit configurations"
   deleteAllRecruitConfigs: Boolean
-  "Deletes any single configuration"
-  deleteConfig(id: ID!): Boolean
   "Deletes all configurations"
   deleteAllConfigs: Boolean
-  "Deletes all chained attack configurations"
+  "Deletes all attack schedulers that are suppose to be executed by the same village"
   deleteChainedAttackSchedulers(chainId: ID!): Boolean
+  "Deletes all attack schedulers"
+  deleteAllAttackSchedulers: Boolean
   "Deletes a single building upgrade configuration"
   deleteBuildingUpgradeConfig(id: ID!): Boolean
   "Deletes all building upgrade configurations"
