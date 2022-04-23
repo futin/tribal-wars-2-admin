@@ -20,6 +20,11 @@ input MoveUnitsInput {
   unitType: UnitType
 }
 
+input SpyRecruitConfigInput {
+  maxRecruitSpies: Int!
+  villagesToIgnore: [String]
+}
+
 input MassDonationConfigInput {
   "Percentage that should be donated"
   percentage: Int!
