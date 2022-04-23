@@ -1,3 +1,6 @@
+### 1.7.0 on 23.04.2022
+- Documentation updated, endpoints refactored, missing endpoints added
+
 ### 1.6.1 on 22.04.2022
 - Patched farming API: added new param for maximum attacks per farming village
 
