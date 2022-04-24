@@ -1,0 +1,38 @@
+input MoveUnitsConfigInput {
+  "Minimum minutes until next farming attack. Default value is 5h"
+  minRetrialIntervalInMinutes: Int = 300
+  "For all the villages that are below the threshold, move operation will be executed"
+  originVillageAvailableProvisionsThreshold: Int
+  "All the villages above this threshold will be used for accepting new units"
+  targetVillageAvailableProvisionsThreshold: Int
+  "Maximum number of allocation operations per origin village"
+  maxRelocationOperationsPerVillage: Int
+  "Maximum number of total allocated units per origin village"
+  maxRelocationUnitsPerVillage: Int
+  "List of villages that are ignored from the 'originVillageAvailableProvisionsThreshold' calculation"
+  originVillageNamesToIgnore: [String]
+  "List of villages that are ignored from the 'targetVillageAvailableProvisionsThreshold' calculation"
+  targetVillageNamesToIgnore: [String]
+}
+
+input MoveSpecificUnitsConfigInput {
+  "Village name where the units should be moved"
+  targetVillageName: String
+  "Village coordinates where the units should be moved"
+  targetVillageCoordinates: String
+  "Instructions for units that are being moved"
+  units: [MoveUnitsInput]
+  "Moving action can be either relocate or support"
+  type: MoveType
+  "List of player village names to ignore movement"
+  playerVillageNamesToIgnore: [String]
+  "List of player village names to allow movement"
+  playerVillageNamesToAllow: [String]
+}
+
+input MoveUnitsInput {
+  "The amount of units to be moved"
+  amount: Int
+  "The type of unit that requires moving"
+  unitType: UnitType
+}

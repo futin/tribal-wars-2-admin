@@ -1,0 +1,12 @@
+type MoveUnitsConfigType {
+  id: ID,
+  minRetrialIntervalInMinutes: Int
+  originVillageAvailableProvisionsThreshold: Int
+  targetVillageAvailableProvisionsThreshold: Int
+  maxRelocationOperationsPerVillage: Int
+  maxRelocationUnitsPerVillage: Int
+  originVillageNamesToIgnore: [String]
+  targetVillageNamesToIgnore: [String]
+  executedTimes: Int
+  executedAt: DateTime
+}

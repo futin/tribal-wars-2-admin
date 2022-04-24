@@ -19,6 +19,10 @@ type Query {
   getAllBuildingUpgradeConfigs: [BuildingUpgradeConfigType]
   "Returns a single building upgrade configuration"
   getBuildingUpgradeConfig(id: ID!): BuildingUpgradeConfigType
+  "Returns all move units configurations"
+  getAllMoveUnitsConfigs: [MoveUnitsConfigType]
+  "Returns a single move units configuration"
+  getMoveUnitsConfig(id: ID!): MoveUnitsConfigType
 }
 
 type Mutation {
@@ -39,7 +43,10 @@ type Mutation {
   "Executes a single building upgrades action immediately, without persisting the configuration"
   activateImmediateBuildingUpgrade(buildingUpgradeConfig: BuildingUpgradeConfigInput!): Boolean
   "Executes a single movement action, without persisting the configuration"
-  activateMassMoveUnits(moveConfig: MoveUnitsConfigInput!): Boolean
+  setMoveUnitsConfig(moveConfig: MoveUnitsConfigInput!): MoveUnitsConfigType
+  "Executes a single movement action, without persisting the configuration"
+  activateMoveUnits(moveConfig: MoveUnitsConfigInput!): Boolean
+  activateMoveSpecificUnits(moveSpecificConfig: MoveSpecificUnitsConfigInput!): Boolean
   "Executes a single mass donation action, without persisting the configuration"
   activateMassDonation(massDonationConfig: MassDonationConfigInput!): Boolean
   "Deletes a single farming configuration"
@@ -60,4 +67,8 @@ type Mutation {
   deleteBuildingUpgradeConfig(id: ID!): Boolean
   "Deletes all building upgrade configurations"
   deleteAllBuildingUpgradeConfigs: Boolean
+  "Deletes a single move units configuration"
+  deleteMoveUnitsConfig(id: ID!): Boolean
+  "Deletes all move units configurations"
+  deleteAllMoveUnitsConfigs: Boolean
 }

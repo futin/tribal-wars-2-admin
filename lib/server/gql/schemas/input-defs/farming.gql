@@ -1,6 +1,6 @@
 input FarmingConfigInput {
   "Minimum minutes until next farming attack. Default value is 60 minutes"
-  minimumRetrialIntervalInMinutes: Int = 60
+  minRetrialIntervalInMinutes: Int = 60
   "List of your villages that will be used for this farming configuration."
   playerVillagesToAllow: [PlayerVillageFarmingInput]
   "List of village names NOT to be included in the attack."
