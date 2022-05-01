@@ -1,3 +1,6 @@
+### 1.8.0 on 01.05.2022
+- Added new feature - automatic units relocation
+
 ### 1.7.1 on 23.04.2022
 - Added some default schema values
 
