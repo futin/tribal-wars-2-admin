@@ -5,10 +5,10 @@ input RelocateUnitsConfigInput {
   sourceVillageAvailableProvisionsThreshold: Int
   "All the villages above this threshold will be used for accepting new units"
   targetVillageAvailableProvisionsThreshold: Int
-  "Maximum number of allocation operations per source village"
-  maxRelocationOperationsPerVillage: Int
-  "Maximum number of total allocated units per source village"
-  maxRelocationUnitsPerVillage: Int
+  "Maximum number of allocation operations per source village. Default value is 20"
+  maxRelocationOperationsPerVillage: Int = 20
+  "Maximum number of total allocated units per source village. Default value is 1000"
+  maxRelocationUnitsPerVillage: Int = 1000
   "List of villages that are ignored from the 'sourceVillageAvailableProvisionsThreshold' calculation"
   sourceVillageNamesToIgnore: [String]
   "List of villages that are ignored from the 'targetVillageAvailableProvisionsThreshold' calculation"
