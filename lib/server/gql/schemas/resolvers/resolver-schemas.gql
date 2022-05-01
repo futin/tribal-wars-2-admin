@@ -19,6 +19,10 @@ type Query {
   getAllBuildingUpgradeConfigs: [BuildingUpgradeConfigType]
   "Returns a single building upgrade configuration"
   getBuildingUpgradeConfig(id: ID!): BuildingUpgradeConfigType
+  "Returns all relocate units configurations"
+  getAllRelocateUnitsConfigs: [RelocateUnitsConfigType]
+  "Returns a single relocate units configuration"
+  getRelocateUnitsConfig(id: ID!): RelocateUnitsConfigType
 }
 
 type Mutation {
@@ -38,8 +42,11 @@ type Mutation {
   setBuildingUpgradeConfig(buildingUpgradeConfig: BuildingUpgradeConfigInput!): BuildingUpgradeConfigType
   "Executes a single building upgrades action immediately, without persisting the configuration"
   activateImmediateBuildingUpgrade(buildingUpgradeConfig: BuildingUpgradeConfigInput!): Boolean
-  "Executes a single movement action, without persisting the configuration"
-  activateMassMoveUnits(moveConfig: MoveUnitsConfigInput!): Boolean
+  "Executes a single relocate action, without persisting the configuration"
+  setRelocateUnitsConfig(relocateConfig: RelocateUnitsConfigInput!): RelocateUnitsConfigType
+  "Executes a single relocate action, without persisting the configuration"
+  activateRelocateUnits(relocateConfig: RelocateUnitsConfigInput!): Boolean
+  activateMoveSpecificUnits(moveSpecificConfig: MoveSpecificUnitsConfigInput!): Boolean
   "Executes a single mass donation action, without persisting the configuration"
   activateMassDonation(massDonationConfig: MassDonationConfigInput!): Boolean
   "Deletes a single farming configuration"
@@ -60,4 +67,8 @@ type Mutation {
   deleteBuildingUpgradeConfig(id: ID!): Boolean
   "Deletes all building upgrade configurations"
   deleteAllBuildingUpgradeConfigs: Boolean
+  "Deletes a single relocate units configuration"
+  deleteRelocateUnitsConfig(id: ID!): Boolean
+  "Deletes all relocate units configurations"
+  deleteAllRelocateUnitsConfigs: Boolean
 }

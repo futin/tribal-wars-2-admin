@@ -126,7 +126,8 @@ All other methods require database usage by performing different CRUD operations
 - Building upgrades
 - Scheduling attacks and performing precise attack calculations
 - Spies recruitment
-- Units movement
+- Units movement (single action, relocate or support)
+- Automatic units relocation
 - Mass donation
 
 **Coming soon**: explanation of every feature in more detail
