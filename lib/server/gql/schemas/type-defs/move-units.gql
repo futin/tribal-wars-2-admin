@@ -1,4 +1,4 @@
-type MoveUnitsConfigType {
+type RelocateUnitsConfigType {
   id: ID,
   minRetrialIntervalInMinutes: Int
   sourceVillageAvailableProvisionsThreshold: Int
