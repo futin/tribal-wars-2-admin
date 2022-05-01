@@ -1,0 +1,51 @@
+input RelocateUnitsConfigInput {
+  "Minimum minutes until next farming attack. Default value is 5h"
+  minRetrialIntervalInMinutes: Int = 300
+  "For all the villages that are below the threshold, relocate operation will be executed"
+  sourceVillageAvailableProvisionsThreshold: Int
+  "All the villages above this threshold will be used for accepting new units"
+  targetVillageAvailableProvisionsThreshold: Int
+  "Maximum number of allocation operations per source village"
+  maxRelocationOperationsPerVillage: Int
+  "Maximum number of total allocated units per source village"
+  maxRelocationUnitsPerVillage: Int
+  "List of villages that are ignored from the 'sourceVillageAvailableProvisionsThreshold' calculation"
+  sourceVillageNamesToIgnore: [String]
+  "List of villages that are ignored from the 'targetVillageAvailableProvisionsThreshold' calculation"
+  targetVillageNamesToIgnore: [String]
+  "Instructions for units that are being relocated"
+  units: UnitsInput
+  "Preset that is setup for moving. If provided, it overwrites the `units` config"
+  presetConfigName: String
+}
+
+input MoveSpecificUnitsConfigInput {
+  "Village name where the units should be moved"
+  targetVillageName: String
+  "Village coordinates where the units should be moved"
+  targetVillageCoordinates: String
+  "Instructions for units that are being moved"
+  units: UnitsInput
+  "Moving action can be either relocate or support"
+  type: MoveType
+  "List of player village names to ignore movement"
+  playerVillageNamesToIgnore: [String]
+  "List of player village names to allow movement"
+  playerVillageNamesToAllow: [String]
+}
+
+input UnitsInput {
+  archer: Int
+  axe: Int
+  catapult: Int
+  doppelsoldner: Int
+  heavy_cavalry: Int
+  knight: Int
+  light_cavalry: Int
+  mounted_archer: Int
+  ram: Int
+  snob: Int
+  spear: Int
+  sword: Int
+  trebuchet: Int
+}

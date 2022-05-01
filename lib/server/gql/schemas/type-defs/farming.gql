@@ -1,6 +1,6 @@
 type FarmingConfigType {
   id: ID,
-  minimumRetrialIntervalInMinutes: Float
+  minRetrialIntervalInMinutes: Float
   playerVillagesToAllow: [PlayerVillageAttackType]
   playerVillageNamesToIgnore: [String]
   barbarianVillagesArea: BarbarianVillagesAreaType
