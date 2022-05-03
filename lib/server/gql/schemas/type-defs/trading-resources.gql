@@ -1,0 +1,6 @@
+type TradingResourcesConfigType {
+  id: ID,
+  executedTimes: Int
+  executedAt: DateTime
+}
+

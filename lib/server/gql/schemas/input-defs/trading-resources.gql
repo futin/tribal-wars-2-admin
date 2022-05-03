@@ -1,0 +1,8 @@
+input TradingResourcesConfigInput {
+  "Name of the player village that requires a building upgrades"
+  villageName: String
+  "Building upgrade orders or commands that must be executed"
+  buildingOrder: [BuildingOrderType] = [RESOURCES]
+  "Priority for the provided building order"
+  buildingPriority: BuildingPriorityType = CHEAP
+}
