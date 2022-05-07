@@ -1,8 +1,18 @@
 input TradingResourcesConfigInput {
-  "Name of the player village that requires a building upgrades"
-  villageName: String
-  "Building upgrade orders or commands that must be executed"
-  buildingOrder: [BuildingOrderType] = [RESOURCES]
-  "Priority for the provided building order"
-  buildingPriority: BuildingPriorityType = CHEAP
+  "Minimum minutes until next trading resources operations. Default value is 5h"
+  minRetrialIntervalInMinutes: Int = 300
+  "Villages with high available resources threshold will be exporting resources with high priority"
+  sourceVillageAvailableResourcesHighThresholdInPercent: Percentage
+  "Villages with normal available resources threshold will be exporting resources ONLY if required by the 'targetsLow' configuration"
+  sourceVillageAvailableResourcesThresholdInPercent: Percentage
+  "Villages with low available resources threshold will be importing resources with high priority"
+  targetVillageAvailableResourcesLowThresholdInPercent: Percentage
+  "Villages with normal available resources threshold will be importing resources ONLY if required by the 'sourcesHigh' configuration"
+  targetVillageAvailableResourcesThresholdInPercent: Percentage
+  "List of villages that are ignored from the 'sourceVillage*' calculation"
+  sourceVillageNamesToIgnore: [String]
+  "List of villages that are ignored from the 'targetVillage*' calculation"
+  targetVillageNamesToIgnore: [String]
+  "Percentage of used transport units"
+  maxTransportsToUseInPercent: Percentage
 }
