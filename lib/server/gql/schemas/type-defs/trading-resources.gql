@@ -1,13 +1,14 @@
 type TradingResourcesConfigType {
   id: ID,
-  minRetrialIntervalInMinutes: Int = 300
-  sourceVillageAvailableResourcesHighThresholdInPercent: Percentage
+  minRetrialIntervalInMinutes: Int
+  sourceVillageAvailableResourcesRichThresholdInPercent: Percentage
   sourceVillageAvailableResourcesThresholdInPercent: Percentage
-  targetVillageAvailableResourcesLowThresholdInPercent: Percentage
+  targetVillageAvailableResourcesPoorThresholdInPercent: Percentage
   targetVillageAvailableResourcesThresholdInPercent: Percentage
   sourceVillageNamesToIgnore: [String]
   targetVillageNamesToIgnore: [String]
   maxTransportsToUseInPercent: Percentage
   executedTimes: Int
+  failedTimes: Int
   executedAt: DateTime
 }

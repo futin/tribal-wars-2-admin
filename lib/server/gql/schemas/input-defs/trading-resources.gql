@@ -1,12 +1,12 @@
 input TradingResourcesConfigInput {
   "Minimum minutes until next trading resources operations. Default value is 5h"
   minRetrialIntervalInMinutes: Int = 300
-  "Villages with high available resources threshold will be exporting resources with high priority"
-  sourceVillageAvailableResourcesHighThresholdInPercent: Percentage
+  "Villages with rich available resources threshold will be exporting resources with high priority"
+  sourceVillageAvailableResourcesRichThresholdInPercent: Percentage
   "Villages with normal available resources threshold will be exporting resources ONLY if required by the 'targetsLow' configuration"
   sourceVillageAvailableResourcesThresholdInPercent: Percentage
-  "Villages with low available resources threshold will be importing resources with high priority"
-  targetVillageAvailableResourcesLowThresholdInPercent: Percentage
+  "Villages with poor available resources threshold will be importing resources with high priority"
+  targetVillageAvailableResourcesPoorThresholdInPercent: Percentage
   "Villages with normal available resources threshold will be importing resources ONLY if required by the 'sourcesHigh' configuration"
   targetVillageAvailableResourcesThresholdInPercent: Percentage
   "List of villages that are ignored from the 'sourceVillage*' calculation"
