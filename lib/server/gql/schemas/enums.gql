@@ -24,6 +24,10 @@ enum BuildingOrderType {
   RESOURCES
   "These building upgrades are included: timber_camp, clay_pit, iron_mine and warehouse"
   SECONDARY
+  "Only focuses on upgrading rally point"
+  RALLY_POINT
+  "Only focuses on upgrading statue"
+  STATUE
   "Only focuses on upgrading headquarter"
   HEADQUARTER
   "Only focuses on upgrading barracks"
