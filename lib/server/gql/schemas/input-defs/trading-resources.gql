@@ -1,18 +1,30 @@
 input TradingResourcesConfigInput {
-  "Minimum minutes until next trading resources operations. Default value is 5h"
-  minRetrialIntervalInMinutes: Int = 300
+  "Minimum minutes until next trading resources operations. Default value is 3h"
+  minRetrialIntervalInMinutes: Int = 180
   "Villages with rich available resources threshold will be exporting resources with high priority"
-  sourceVillageAvailableResourcesRichThresholdInPercent: Percentage
+  sourceVillageAvailableResourcesRichThresholdInPercent: Percentage = 80
   "Villages with normal available resources threshold will be exporting resources ONLY if required by the 'targetsLow' configuration"
-  sourceVillageAvailableResourcesThresholdInPercent: Percentage
+  sourceVillageAvailableResourcesThresholdInPercent: Percentage = 60
   "Villages with poor available resources threshold will be importing resources with high priority"
-  targetVillageAvailableResourcesPoorThresholdInPercent: Percentage
+  targetVillageAvailableResourcesPoorThresholdInPercent: Percentage = 20
   "Villages with normal available resources threshold will be importing resources ONLY if required by the 'sourcesHigh' configuration"
-  targetVillageAvailableResourcesThresholdInPercent: Percentage
+  targetVillageAvailableResourcesThresholdInPercent: Percentage = 40
   "List of villages that are ignored from the 'sourceVillage*' calculation"
   sourceVillageNamesToIgnore: [String]
   "List of villages that are ignored from the 'targetVillage*' calculation"
   targetVillageNamesToIgnore: [String]
   "Percentage of used transport units"
-  maxTransportsToUseInPercent: Percentage
+  maxTransportsToUseInPercent: Percentage = 100
+  "Resources in any source village should not fall below this percentage"
+  minSourceVillageResourcesThresholdInPercent: Percentage = 50
+  "Resources in any target village should not go above this percentage"
+  maxTargetVillageResourcesThresholdInPercent: Percentage = 50
+  "Order of resources that must be used for trading resources between every source/target village"
+  tradingOrder: TradingOrder = BALANCED
+}
+
+enum TradingOrder {
+  BALANCED
+  RANDOM
+  LOW_FIRST
 }
