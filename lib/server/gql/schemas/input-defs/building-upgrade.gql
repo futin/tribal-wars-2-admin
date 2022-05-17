@@ -1,8 +1,26 @@
 input BuildingUpgradeConfigInput {
   "Name of the player village that requires a building upgrades"
   villageName: String
-  "Building upgrade orders or commands that must be executed"
-  buildingOrder: [BuildingOrderType] = [RESOURCES]
-  "Priority for the provided building order"
+  "Building upgrade commands that must be executed"
+  buildingCommands: [BuildingCommandType] = [RESOURCES]
+  "Priority for the provided building commands"
   buildingPriority: BuildingPriorityType = CHEAP
+  maxLevelPerBuildingName: MaxLevelPerBuildingNameInput
+}
+
+input MaxLevelPerBuildingNameInput {
+  wood: Int
+  clayPit: Int
+  ironMine: Int
+  warehouse: Int
+  hospital: Int
+  tavern: Int
+  market: Int
+  secondary: Int
+  rallyPoint: Int
+  statue: Int
+  headquarter: Int
+  barracks: Int
+  farm: Int
+  wall: Int
 }

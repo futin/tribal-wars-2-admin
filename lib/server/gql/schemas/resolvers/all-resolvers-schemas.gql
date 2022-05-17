@@ -15,10 +15,6 @@ type Query {
   calculateAttackLaunchTimes(attackScheduler: AttackSchedulerInput!): AttackSchedulerType
   "Returns all scheduled attacks"
   getScheduledAttacks(filter: AttackSchedulerFilter!): [AttackSchedulerType]
-  "Returns all building upgrade configurations"
-  getAllBuildingUpgradeConfigs: [BuildingUpgradeConfigType]
-  "Returns a single building upgrade configuration"
-  getBuildingUpgradeConfig(id: ID!): BuildingUpgradeConfigType
   "Returns all relocate units configurations"
   getAllRelocateUnitsConfigs: [RelocateUnitsConfigType]
   "Returns a single relocate units configuration"
@@ -38,10 +34,6 @@ type Mutation {
   activateImmediateSpyRecruit(spyRecruitConfig: SpyRecruitConfigInput!): Boolean
   "Creates an attack configuration that is used by the scheduler"
   setAttackScheduler(attackScheduler: AttackSchedulerInput!): AttackSchedulerType
-  "Creates a building upgrades configuration that is used by the scheduler"
-  setBuildingUpgradeConfig(buildingUpgradeConfig: BuildingUpgradeConfigInput!): BuildingUpgradeConfigType
-  "Executes a single building upgrades action immediately, without persisting the configuration"
-  activateImmediateBuildingUpgrade(buildingUpgradeConfig: BuildingUpgradeConfigInput!): Boolean
   "Executes a single relocate action, without persisting the configuration"
   setRelocateUnitsConfig(relocateConfig: RelocateUnitsConfigInput!): RelocateUnitsConfigType
   "Executes a single relocate action, without persisting the configuration"
@@ -63,10 +55,6 @@ type Mutation {
   deleteChainedAttackSchedulers(chainId: ID!): Boolean
   "Deletes all attack schedulers"
   deleteAllAttackSchedulers: Boolean
-  "Deletes a single building upgrade configuration"
-  deleteBuildingUpgradeConfig(id: ID!): Boolean
-  "Deletes all building upgrade configurations"
-  deleteAllBuildingUpgradeConfigs: Boolean
   "Deletes a single relocate units configuration"
   deleteRelocateUnitsConfig(id: ID!): Boolean
   "Deletes all relocate units configurations"
