@@ -19,7 +19,7 @@ enum MoveType {
   relocate
 }
 
-enum BuildingOrderType {
+enum BuildingCommandType {
   "These building upgrades are included: timber_camp, clay_pit, iron_mine and warehouse"
   RESOURCES
   "These building upgrades are included: timber_camp, clay_pit, iron_mine and warehouse"

@@ -1,3 +1,9 @@
+### 1.9.0 on 17.05.2022
+- Fixed bug with units relocation
+- Added provision amount per unit type into units relocation calculation
+- Fixed a bug with failed units recruitment
+- Added maximum upgrade level per building name
+
 ### 1.8.0 on 01.05.2022
 - Added new feature - automatic units relocation
 

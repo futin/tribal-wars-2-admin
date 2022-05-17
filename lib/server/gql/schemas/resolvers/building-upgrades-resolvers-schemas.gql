@@ -1,0 +1,17 @@
+type Query {
+  "Returns all building upgrade configurations"
+  getAllBuildingUpgradeConfigs: [BuildingUpgradeConfigType]
+  "Returns a single building upgrade configuration"
+  getBuildingUpgradeConfig(id: ID!): BuildingUpgradeConfigType
+}
+
+type Mutation {
+  "Creates a building upgrades configuration that is used by the scheduler"
+  setBuildingUpgradeConfig(buildingUpgradeConfig: BuildingUpgradeConfigInput!): BuildingUpgradeConfigType
+  "Executes a single building upgrades action immediately, without persisting the configuration"
+  activateImmediateBuildingUpgrade(buildingUpgradeConfig: BuildingUpgradeConfigInput!): Boolean
+  "Deletes a single building upgrade configuration"
+  deleteBuildingUpgradeConfig(id: ID!): Boolean
+  "Deletes all building upgrade configurations"
+  deleteAllBuildingUpgradeConfigs: Boolean
+}
