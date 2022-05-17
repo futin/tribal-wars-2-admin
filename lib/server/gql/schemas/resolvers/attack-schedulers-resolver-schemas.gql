@@ -1,0 +1,15 @@
+type Query {
+  "Returns the details regarding the attack, with the exact execution times for every provided target"
+  calculateAttackLaunchTimes(attackScheduler: AttackSchedulerInput!): AttackSchedulerType
+  "Returns all scheduled attacks"
+  getScheduledAttacks(filter: AttackSchedulerFilter!): [AttackSchedulerType]
+}
+
+type Mutation {
+  "Creates an attack configuration that is used by the scheduler"
+  setAttackScheduler(attackScheduler: AttackSchedulerInput!): AttackSchedulerType
+  "Deletes all attack schedulers that are suppose to be executed by the same village"
+  deleteChainedAttackSchedulers(chainId: ID!): Boolean
+  "Deletes all attack schedulers"
+  deleteAllAttackSchedulers: Boolean
+}

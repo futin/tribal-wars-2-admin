@@ -1,0 +1,17 @@
+type Query {
+  "Returns all recruitment configurations"
+  getAllRecruitConfigs: [RecruitConfigType]
+  "Returns a single recruitment configuration"
+  getRecruitConfig(id: ID!): RecruitConfigType
+}
+
+type Mutation {
+  "Creates a recruit configuration that is used by the scheduler"
+  setRecruitConfig(recruitConfig: RecruitConfigInput!): RecruitConfigType
+  "Executes a single recruit action immediately, without persisting the configuration"
+  activateImmediateRecruit(recruitConfig: RecruitConfigInput!): Boolean
+  "Deletes a single recruit configuration"
+  deleteRecruitConfig(id: ID!): Boolean
+  "Deletes all recruit configurations"
+  deleteAllRecruitConfigs: Boolean
+}
