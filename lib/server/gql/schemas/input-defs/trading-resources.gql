@@ -15,10 +15,6 @@ input TradingResourcesConfigInput {
   targetVillageNamesToIgnore: [String]
   "Percentage of used transport units"
   maxTransportsToUseInPercent: Percentage = 100
-  "Resources in any source village should not fall below this percentage"
-  minSourceVillageResourcesThresholdInPercent: Percentage = 50
-  "Resources in any target village should not go above this percentage"
-  maxTargetVillageResourcesThresholdInPercent: Percentage = 50
   "Order of resources that must be used for trading resources between every source/target village"
   tradingOrder: TradingOrder = BALANCED
 }
@@ -26,5 +22,5 @@ input TradingResourcesConfigInput {
 enum TradingOrder {
   BALANCED
   RANDOM
-  LOW_FIRST
+  ON_EDGE_FIRST
 }

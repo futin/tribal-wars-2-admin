@@ -8,8 +8,6 @@ type TradingResourcesConfigType {
   sourceVillageNamesToIgnore: [String]
   targetVillageNamesToIgnore: [String]
   maxTransportsToUseInPercent: Percentage
-  minSourceVillageResourcesThresholdInPercent: Percentage
-  maxTargetVillageResourcesThresholdInPercent: Percentage
   tradingOrder: TradingOrder
   executedTimes: Int
   failedTimes: Int
