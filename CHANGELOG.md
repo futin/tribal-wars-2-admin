@@ -1,5 +1,8 @@
+### 1.12.0 on 22.05.2022
+- Added scheduler for automatic resources transfer between villages
+
 ### 1.11.0 on 22.05.2022
-- Added automatic resources transfer between villages, with predefined resource availability,
+- Added automatic resources transfer between villages, with predefined resource availability
   both for source and for target villages
 - Currently, only "BALANCED" priority order is available
 
