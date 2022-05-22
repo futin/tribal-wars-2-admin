@@ -1,3 +1,10 @@
+### 1.10.0 on 22.05.2022
+- Added global auth point for every executor
+- Removed closing of socket connection upon action termination
+- Implemented in-memory session by auth
+- Implemented session reusing between multiple different config executions, which in turn reduces
+  the number of login requests and restarts while using browser/mobile app
+
 ### 1.9.0 on 17.05.2022
 - Fixed bug with units relocation
 - Added provision amount per unit type into units relocation calculation
