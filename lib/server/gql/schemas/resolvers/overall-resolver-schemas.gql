@@ -1,0 +1,9 @@
+type Query {
+  "Returns all configurations"
+  getAllConfigs: AllConfigsType
+}
+
+type Mutation {
+  "Deletes all configurations"
+  deleteAllConfigs: Boolean
+}

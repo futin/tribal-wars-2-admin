@@ -1,0 +1,18 @@
+type Query {
+  "Returns all relocate units configurations"
+  getAllRelocateUnitsConfigs: [RelocateUnitsConfigType]
+  "Returns a single relocate units configuration"
+  getRelocateUnitsConfig(id: ID!): RelocateUnitsConfigType
+}
+
+type Mutation {
+  "Executes a single relocate action, without persisting the configuration"
+  setRelocateUnitsConfig(relocateConfig: RelocateUnitsConfigInput!): RelocateUnitsConfigType
+  "Executes a single relocate action, without persisting the configuration"
+  activateRelocateUnits(relocateConfig: RelocateUnitsConfigInput!): Boolean
+  activateMoveSpecificUnits(moveSpecificConfig: MoveSpecificUnitsConfigInput!): Boolean
+  "Deletes a single relocate units configuration"
+  deleteRelocateUnitsConfig(id: ID!): Boolean
+  "Deletes all relocate units configurations"
+  deleteAllRelocateUnitsConfigs: Boolean
+}

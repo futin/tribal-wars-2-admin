@@ -1,5 +1,5 @@
 input RelocateUnitsConfigInput {
-  "Minimum minutes until next farming attack. Default value is 5h"
+  "Minimum minutes until next relocate units operations. Default value is 5h"
   minRetrialIntervalInMinutes: Int = 300
   "For all the villages that are below the threshold, relocate operation will be executed"
   sourceVillageAvailableProvisionsThreshold: Int

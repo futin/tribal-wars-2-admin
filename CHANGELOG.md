@@ -1,3 +1,8 @@
+### 1.11.0 on 22.05.2022
+- Added automatic resources transfer between villages, with predefined resource availability,
+  both for source and for target villages
+- Currently, only "BALANCED" priority order is available
+
 ### 1.10.0 on 22.05.2022
 - Added global auth point for every executor
 - Removed closing of socket connection upon action termination

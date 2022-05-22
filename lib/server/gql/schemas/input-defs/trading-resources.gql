@@ -1,0 +1,26 @@
+input TradingResourcesConfigInput {
+  "Minimum minutes until next trading resources operations. Default value is 3h"
+  minRetrialIntervalInMinutes: Int = 180
+  "Villages with rich available resources threshold will be exporting resources with high priority"
+  sourceVillageAvailableResourcesRichThresholdInPercent: Percentage = 80
+  "Villages with normal available resources threshold will be exporting resources ONLY if required by the 'targetsLow' configuration"
+  sourceVillageAvailableResourcesThresholdInPercent: Percentage = 60
+  "Villages with poor available resources threshold will be importing resources with high priority"
+  targetVillageAvailableResourcesPoorThresholdInPercent: Percentage = 20
+  "Villages with normal available resources threshold will be importing resources ONLY if required by the 'sourcesHigh' configuration"
+  targetVillageAvailableResourcesThresholdInPercent: Percentage = 40
+  "List of villages that are ignored from the 'sourceVillage*' calculation"
+  sourceVillageNamesToIgnore: [String]
+  "List of villages that are ignored from the 'targetVillage*' calculation"
+  targetVillageNamesToIgnore: [String]
+  "Percentage of used transport units"
+  maxTransportsToUseInPercent: Percentage = 100
+  "Order of resources that must be used for trading resources between every source/target village"
+  tradingOrder: TradingOrder = BALANCED
+}
+
+enum TradingOrder {
+  BALANCED
+  RANDOM
+  ON_EDGE_FIRST
+}
