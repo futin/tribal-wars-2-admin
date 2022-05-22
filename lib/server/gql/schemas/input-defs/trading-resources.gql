@@ -20,7 +20,8 @@ input TradingResourcesConfigInput {
 }
 
 enum TradingOrder {
+  "Balance between all resources will be kept"
   BALANCED
-  RANDOM
-  ON_EDGE_FIRST
+  # "First resources to be transported (source villages) or received (target villages) will be the highest or lowest amount respectively"
+  # ON_EDGE_FIRST
 }
