@@ -1,3 +1,6 @@
+### 1.12.1 on 22.05.2022
+- Added "maxAllowedAvailableResourcesInPercentage" for farming feature
+
 ### 1.12.0 on 22.05.2022
 - Added scheduler for automatic resources transfer between villages
 
