@@ -1,0 +1,17 @@
+type Query {
+  "Returns all farming configurations"
+  getAllFarmingConfigs: [FarmingConfigType]
+  "Returns a single farming configuration"
+  getFarmingConfig(id: ID!): FarmingConfigType
+}
+
+type Mutation {
+  "Creates a farming configuration that is used by the scheduler"
+  setFarmingConfig(farmingConfig: FarmingConfigInput!): FarmingConfigType
+  "Executes a single farming action immediately, without persisting the configuration"
+  activateImmediateFarming(farmingConfig: FarmingConfigInput!): Boolean
+  "Deletes a single farming configuration"
+  deleteFarmingConfig(id: ID!): Boolean
+  "Deletes all farming configurations"
+  deleteAllFarmingConfigs: Boolean
+}

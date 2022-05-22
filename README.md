@@ -129,6 +129,7 @@ All other methods require database usage by performing different CRUD operations
 - Units movement (single action, relocate or support)
 - Automatic units relocation
 - Mass donation
+- Automatic resources transport between player villages
 
 **Coming soon**: explanation of every feature in more detail
 

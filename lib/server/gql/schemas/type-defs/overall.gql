@@ -3,5 +3,6 @@ type AllConfigsType {
   recruitConfigs: [RecruitConfigType]
   attackSchedulers: [AttackSchedulerType]
   buildingUpgradeConfigs: [BuildingUpgradeConfigType]
+  tradingResourcesConfigs: [TradingResourcesConfigType]
 }
 

@@ -1,0 +1,11 @@
+type Query {
+  "Returns detailed villages data, both resources and units. If googleDocId is provided and valid, the whole statistics is being stored in google document"
+  getVillagesData(googleDocId: ID): Dynamic
+}
+
+type Mutation {
+  "Executes a single mass donation action, without persisting the configuration"
+  activateMassDonation(massDonationConfig: MassDonationConfigInput!): Boolean
+  "Executes recruit action of spies, up to the [maxRecruitSpies] number"
+  activateImmediateSpyRecruit(spyRecruitConfig: SpyRecruitConfigInput!): Boolean
+}
