@@ -21,6 +21,8 @@ input FarmingConfigInput {
   minBarbarianVillagePoints: Int = 100
   "Shuffles the villages randomly before starting the farming"
   shufflePlayerVillages: Boolean = true
+  "If ALL resources are above this percentage, abort farming since there are enough resources in the village"
+  maxAllowedAvailableResourcesInPercentage: Percentage = 100
 }
 
 input PlayerVillageFarmingInput {

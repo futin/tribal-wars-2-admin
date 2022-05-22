@@ -9,6 +9,7 @@ type FarmingConfigType {
   barbarianVillagesToIgnore: BarbarianVillagesToIgnoreType
   maxNonBarbarianVillagesPoints: Int
   maxOutgoingAttacksAllowed: Int
+  maxAllowedAvailableResourcesInPercentage: Percentage
   executedTimes: Int
   executedAt: DateTime
 }
