@@ -1,6 +1,6 @@
 {
   "name": "tribal-wars-2-admin",
-  "version": "1.12.0",
+  "version": "1.12.1",
   "description": "Server which automatizes certain processes in TW2",
   "exports": "./lib/index.js",
   "type": "module",
