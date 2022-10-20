@@ -1,0 +1,28 @@
+input ResourceDepositConfigInput {
+  "Minimum minutes until next trading resources operations. Default value is 30 min"
+  minRetrialIntervalInMinutes: Int = 30
+  "Set which jobs should be selected first"
+  nextResourceDepositJobPriority: ResourceDepositJobPriority = HIGH_AMOUNT
+  "Set which villages have the highest priority for deposit collection"
+  villageToCollectResourceDepositPriority: VillageToCollectResourceDepositPriority = AVAILABLE_STORAGE
+}
+
+enum ResourceDepositJobPriority {
+  "Select a job with highest amount"
+  HIGH_AMOUNT
+  "Select a job with highest quality"
+  HIGH_QUALITY
+  "Select a fastest job"
+  FAST
+  "Select anu wood job"
+  WOOD
+  "Select anu clay job"
+  CLAY
+  "Select anu iron job"
+  IRON
+}
+
+enum VillageToCollectResourceDepositPriority {
+  "Villages with the lowest income have priority"
+  AVAILABLE_STORAGE
+}
