@@ -1,3 +1,6 @@
+### 1.13.0 on 20.10.2022
+- Added new feature - collecting resource deposit
+
 ### 1.12.1 on 22.05.2022
 - Added "maxAllowedAvailableResourcesInPercentage" for farming feature
 
