@@ -1,0 +1,17 @@
+type Query {
+  "Returns all resource deposit configurations"
+  getAllResourceDepositConfigs: [ResourceDepositConfigType]
+  "Returns a single resource deposit configuration"
+  getResourceDepositConfig(id: ID!): ResourceDepositConfigType
+}
+
+type Mutation {
+  "Creates a resource deposit configuration that is used by the scheduler"
+  setResourceDepositConfig(resourceDepositConfig: ResourceDepositConfigInput!): ResourceDepositConfigType
+  "Executes a single resource deposit action immediately, without persisting the configuration"
+  activateImmediateResourceDeposit(resourceDepositConfig: ResourceDepositConfigInput!): Boolean
+  "Creates a resource deposit configuration that is used by the scheduler"
+  deleteResourceDepositConfig(recruitConfig: RecruitConfigInput!): Boolean
+  "Deletes all resource deposit configurations"
+  deleteAllResourceDepositConfigs(recruitConfig: RecruitConfigInput!): Boolean
+}

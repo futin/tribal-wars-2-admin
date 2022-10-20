@@ -12,6 +12,6 @@ type Mutation {
   activateImmediateTradingResources(tradingResourcesConfig: TradingResourcesConfigInput!): Boolean
   "Creates a trading resources configuration that is used by the scheduler"
   deleteTradingResourcesConfig(recruitConfig: RecruitConfigInput!): Boolean
-  "Executes a single recruit action immediately, without persisting the configuration"
+  "Deletes all trading resources configurations"
   deleteAllTradingResourcesConfigs(recruitConfig: RecruitConfigInput!): Boolean
 }
