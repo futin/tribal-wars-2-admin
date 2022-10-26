@@ -22,7 +22,7 @@ enum MoveType {
 enum BuildingCommandType {
   "These building upgrades are included: timber_camp, clay_pit, iron_mine and warehouse"
   RESOURCES
-  "These building upgrades are included: timber_camp, clay_pit, iron_mine and warehouse"
+  "These building upgrades are included: hospital, tavern and market"
   SECONDARY
   "Only focuses on upgrading rally point"
   RALLY_POINT
