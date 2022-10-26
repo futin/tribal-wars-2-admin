@@ -1,5 +1,6 @@
 type ResourceDepositConfigType {
-  id: ID,
+  id: ID
+  accountId: String
   minRetrialIntervalInMinutes: Int
   nextResourceDepositJobPriority: ResourceDepositJobPriority
   villageToCollectResourceDepositPriority: VillageToCollectResourceDepositPriority

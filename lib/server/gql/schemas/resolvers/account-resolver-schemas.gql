@@ -1,0 +1,15 @@
+type Query {
+  "Returns all accounts"
+  getAllAccounts: [AccountType]
+  "Returns a single account"
+  getAccount(id: ID!): AccountType
+}
+
+type Mutation {
+  "Creates an account"
+  setAccount(payload: AccountPayloadInput!): AccountType
+  "Deletes an account"
+  deleteAccount(id: ID!): Boolean
+  "Deletes all accounts"
+  deleteAllAccounts: Boolean
+}

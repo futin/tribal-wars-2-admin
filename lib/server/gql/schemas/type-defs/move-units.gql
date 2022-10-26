@@ -1,5 +1,6 @@
 type RelocateUnitsConfigType {
-  id: ID,
+  id: ID
+  accountId: String
   minRetrialIntervalInMinutes: Int
   sourceVillageAvailableProvisionsThreshold: Int
   targetVillageAvailableProvisionsThreshold: Int

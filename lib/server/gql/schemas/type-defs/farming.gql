@@ -1,5 +1,6 @@
 type FarmingConfigType {
-  id: ID,
+  id: ID
+  accountId: String
   minRetrialIntervalInMinutes: Float
   playerVillagesToAllow: [PlayerVillageAttackType]
   playerVillageNamesToIgnore: [String]

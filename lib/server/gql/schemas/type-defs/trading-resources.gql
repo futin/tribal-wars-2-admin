@@ -1,5 +1,6 @@
 type TradingResourcesConfigType {
-  id: ID,
+  id: ID
+  accountId: String
   minRetrialIntervalInMinutes: Int
   sourceVillageAvailableResourcesRichThresholdInPercent: Percentage
   sourceVillageAvailableResourcesThresholdInPercent: Percentage

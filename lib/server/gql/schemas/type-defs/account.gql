@@ -1,0 +1,7 @@
+type AccountType {
+  id: ID
+  userName: String
+  worldName: String
+  token: String
+  createdAt: DateTime
+}

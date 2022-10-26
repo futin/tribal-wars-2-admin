@@ -1,6 +1,7 @@
 type AttackSchedulerType {
   id: ID
   chainId: ID
+  accountId: String
   name: String
   x: Int
   y: Int

@@ -1,5 +1,6 @@
 type RecruitConfigType {
   id: ID
+  accountId: String
   recruitmentInstructions: [RecruitmentInstructionsType]
   playerVillagesToAllow: [PlayerVillageRecruitType]
   playerVillageNamesToIgnore: [String]

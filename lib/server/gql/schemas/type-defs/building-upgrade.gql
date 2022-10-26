@@ -1,5 +1,6 @@
 type BuildingUpgradeConfigType {
-  id: ID,
+  id: ID
+  accountId: String
   villageName: String
   buildingCommands: [BuildingCommandType]
   maxLevelPerBuildingName: MaxLevelPerBuildingNameType

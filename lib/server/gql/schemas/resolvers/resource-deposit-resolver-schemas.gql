@@ -10,8 +10,8 @@ type Mutation {
   setResourceDepositConfig(resourceDepositConfig: ResourceDepositConfigInput!): ResourceDepositConfigType
   "Executes a single resource deposit action immediately, without persisting the configuration"
   activateImmediateResourceDeposit(resourceDepositConfig: ResourceDepositConfigInput!): Boolean
-  "Creates a resource deposit configuration that is used by the scheduler"
-  deleteResourceDepositConfig(recruitConfig: RecruitConfigInput!): Boolean
+  "Deletes a resource deposit configuration"
+  deleteResourceDepositConfig(id: ID!): Boolean
   "Deletes all resource deposit configurations"
-  deleteAllResourceDepositConfigs(recruitConfig: RecruitConfigInput!): Boolean
+  deleteAllResourceDepositConfigs: Boolean
 }
