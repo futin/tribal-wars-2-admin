@@ -1,7 +1,7 @@
 type AccountType {
   id: ID
+  uniqueId: String
   userName: String
   worldName: String
-  token: String
   createdAt: DateTime
 }

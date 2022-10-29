@@ -1,0 +1,7 @@
+type SchedulerType {
+  id: ID
+  accountId: String
+  type: SchedulerTypeEnum
+  executionIntervalInMinutes: Int
+  createdAt: DateTime
+}

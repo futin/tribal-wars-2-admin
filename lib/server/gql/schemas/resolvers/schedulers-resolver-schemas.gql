@@ -1,0 +1,15 @@
+type Query {
+  "Returns all schedulers"
+  getAllSchedulers: [SchedulerType]
+  "Returns a single scheduler"
+  getScheduler(id: ID!): SchedulerType
+}
+
+type Mutation {
+  "Creates a scheduler that is used by the scheduler"
+  setScheduler(scheduler: SchedulerInput!): SchedulerType
+  "Deletes a scheduler"
+  deleteScheduler(id: ID!): Boolean
+  "Deletes all schedulers"
+  deleteAllSchedulers: Boolean
+}

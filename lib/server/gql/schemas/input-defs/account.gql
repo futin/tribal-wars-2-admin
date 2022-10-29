@@ -3,6 +3,4 @@ input AccountPayloadInput {
   userName: String!
   "World that you want to automate"
   worldName: String!
-  "Authorization token extracted from the corresponding world"
-  token: String!
 }

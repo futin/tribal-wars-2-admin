@@ -7,7 +7,7 @@ type Query {
 
 type Mutation {
   "Creates an account"
-  setAccount(payload: AccountPayloadInput!): AccountType
+  setAccount(account: AccountPayloadInput!): AccountType
   "Deletes an account"
   deleteAccount(id: ID!): Boolean
   "Deletes all accounts"

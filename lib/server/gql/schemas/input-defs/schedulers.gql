@@ -1,0 +1,13 @@
+input SchedulerInput {
+  "Account to link with the scheduler with"
+  accountId: String!
+  "Minutes used for setting the scheduler interval on server init"
+  executionIntervalInMinutes: Int!
+  "Type of the scheduler"
+  type: SchedulerTypeEnum = DEFAULT
+}
+
+enum SchedulerTypeEnum {
+  DEFAULT
+  ATTACK
+}
